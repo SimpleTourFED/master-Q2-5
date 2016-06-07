@@ -39,18 +39,19 @@
                     </div>
                     <div class="filter-box-space inline-space">
                         <div class="filter-box">
-                            <div class="condition hide" data-type="pkg-box">套餐筛选</div>
+                            <div class="condition hide" data-type="pkg-box">巴士筛选</div>
                             <span></span>
                             <div class="condition hide" data-type="tourism-type-box">行程类型</div>
                             <span></span>
                             <div class="condition hide" data-type="tourism-days-box">行程天数</div>
                             <div class="pkg-box filter-content">
-                                <h5>选择你想要的旅行套餐: 巴士+ （可多选）</h5>
+                                <h5>选择您想要筛选的巴士类型（可多选）</h5>
                                 <ul>
-                                    <li class="entertainment" data-type="entertainment">含娱乐</li>
-                                    <li class="scenic" data-type="scenic">含门票</li>
-                                    <li class="catering" data-type="catering">含餐饮</li>
-                                    <li class="hotel" data-type="hotel">含住宿</li>
+                                    <li class="bus" data-type="bus">纯巴士</li>
+                                    <li class="entertainment" data-type="entertainment">巴士+娱乐</li>
+                                    <li class="scenic" data-type="scenic">巴士+门票</li>
+                                    <li class="catering" data-type="catering">巴士+餐饮</li>
+                                    <li class="hotel" data-type="hotel">巴士+住宿</li>
                                 </ul>
                                 <div class="btn-gp">
                                     <div class="clear-btn">清空</div>
@@ -160,7 +161,7 @@
                     </div>
                     <!--巴士套餐-->
                     <div class="package-group">
-                        <div data-href = "" data-days="one" data-type="single"  class="package-item bus hotel">
+                        <div data-href = "" data-days="one" data-type="single"  class="package-item hotel">
                             <div class="img-box">
                                 <img src="http://images.simpletour.com/simpletour/images/wechat_tourism/b2e4ce3de537fb248abdf932c0628418.jpg!16">
                                 <div class="tips-group">
@@ -178,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-href = "" data-days="two" data-type="round"  class="package-item bus hotel catering entertainment scenic">
+                        <div data-href = "" data-days="two" data-type="round"  class="package-item hotel catering entertainment scenic">
                             <div class="img-box">
                                 <img src="http://images.simpletour.com/simpletour/images/wechat_tourism/b2e4ce3de537fb248abdf932c0628418.jpg!16">
                                 <div class="tips-group">
@@ -199,7 +200,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-href = "" data-days="three" data-type="round"  class="package-item bus hotel catering">
+                        <div data-href = "" data-days="three" data-type="round"  class="package-item hotel catering">
                             <div class="img-box">
                                 <img src="http://images.simpletour.com/simpletour/images/wechat_tourism/b2e4ce3de537fb248abdf932c0628418.jpg!16">
                                 <div class="tips-group">
@@ -218,7 +219,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div data-href = "" data-days="four" data-type="single"  class="package-item bus scenic">
+                        <div data-href = "" data-days="four" data-type="single"  class="package-item scenic">
                             <div class="img-box">
                                 <img src="http://images.simpletour.com/simpletour/images/wechat_tourism/b2e4ce3de537fb248abdf932c0628418.jpg!16">
                                 <div class="tips-group">
@@ -590,17 +591,51 @@
                 $('.pkg-box li.pkg-select').forEach(function(item) {
                     tourismPkg.push($(item).attr('data-type'));
                 });
-                $('.presell,.bus-item,.package-item').forEach(function(item) {
+
+                if(tourismPkg.length == 0) {
+                    $('.presell,.bus-item,.package-item').show();
+                }
+                // 纯巴士
+                $('.presell.bus,.bus-item').forEach(function(item) {
+                    // 行程类型判断
                     if(tourismType != 'all') {
                         if($(item).attr('data-type') != tourismType) {
                             $(item).hide();
                         }
                     }
+                    // 行程天数判断
                     if(tourismDays != 'all') {
                         if($(item).attr('data-days') != tourismDays) {
                             $(item).hide();
                         }
                     }
+
+                    if(tourismPkg.length) {
+                        var hasBus = false;
+                        for(var j = 0; j < tourismPkg.length; j++) {
+                            if(tourismPkg[j] == 'bus') {
+                                hasBus = true;
+                            }
+                        }
+                        if (!hasBus) {
+                            $(item).hide();
+                        }
+                    }
+                });
+                $('.presell.pkg,.package-item').forEach(function(item) {
+                    // 行程类型判断
+                    if(tourismType != 'all') {
+                        if($(item).attr('data-type') != tourismType) {
+                            $(item).hide();
+                        }
+                    }
+                    // 行程天数判断
+                    if(tourismDays != 'all') {
+                        if($(item).attr('data-days') != tourismDays) {
+                            $(item).hide();
+                        }
+                    }
+
                     for(var i = 0, len = tourismPkg.length; i < len; i++) {
                         if(!$(item).hasClass(tourismPkg[i])) {
 
