@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>简途旅行</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/images/logo.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="/css/thailand.scss?__inline" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <div class="main-wrap">
+        <img class="background" src="/images/bg.png" alt="background"/>
+        <div class="support">
+            <div class="percentbar">
+                <div class="left">10000</div>
+                <div class="right">108</div>
+            </div>
+            <div class="items">
+                <span class="item left">萨瓦迪卡</span>
+                <span class="item right">"新找"</span>
+            </div>
+            <div class="buttons">
+                <a class="btn left"></a>
+                <a class="btn right"></a>
+            </div>
+        </div>
+        <div class="rules">
+            <ul>
+                <li>竞猜活动结果将在6月24日12:00正式公布。</li>
+                <li>凡参与"简途下一站"目的地猜想活动的用户,即可获得抽奖机会一次,抽奖活动将于6月24日12:00开始。</li>
+                <li>本次活动解释权归简途所有。</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/common/js/zepto.min.js"></script>
+<script type="text/javascript" src="/common/js/base.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    $('.percentbar .left').css('width','50%');
+    $('.btn').on('click',function(e){
+        var $this = $(this);
+        $this.addClass('clicked');
+        $.ajax({
+            url: '',
+            data: {},
+            type:'POST',
+            success: function(data){
+                var dataJson = JSON.parse(data);
+                if (dataJson.code == 0) {
+                    location.herf = dataJson.url;
+                } else {
+                    $.alert({
+                        msg: dataJson.msg
+                    });
+                    $this.removeClass('clicked');
+                }
+            },
+            error: function(data){
+                $.alert({
+                    msg:'网络异常,请重试!',
+                });
+                $this.removeClass('clicked');
+            }
+        });
+    });
+</script>
+</html>
