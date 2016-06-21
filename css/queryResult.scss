@@ -402,6 +402,20 @@ body {
 
             }
           }
+          &.type-select {
+            color: #D71345;
+            &:after {
+              float: right;
+              margin-top: rem(16px);
+              margin-right: rem(22px);
+              content: '';
+              display: inline-block;
+              width: rem(14px);
+              height: rem(14px);
+              background: url("/master-Q2-5/images/chooseIcon.png?__sprite") no-repeat center;
+              background-size: contain;
+            }
+          }
         }
       }
     }
