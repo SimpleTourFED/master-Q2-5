@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="../css/thailand.scss??__inline"/>
 </head>
 <body>
+<div class="price-cover"></div>
+<div class="price-modal">
+    <div class="title">哇,恭喜你抽到</div>
+    <div class="priceContent">一坨大便</div>
+    <img src="/images/thailand/getPrice.png" alt="">
+    <p>稍后我们的工作人员会通过电话联系您,</p>
+    <p>请注意保持手机畅通哦!</p>
+    <button>确定</button>
+</div>
+<div class="no-price-modal">
+    <div class="title">抱歉!没有抽到哦!</div>
+    <img src="/images/thailand/noPrice.png" alt="">
+    <p>稍后我们的工作人员会通过电话联系您,</p>
+    <p>请注意保持手机畅通哦!</p>
+    <button>确定</button>
+</div>
 <div class="wrapper">
     <img src="/images/thailand/background.jpeg" alt="">
     <div class="wheel">
@@ -75,6 +91,8 @@
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
     $(document).ready(function() {
+        $('.price-modal').show();
+        $('.price-cover').show();
         $('#clickme').click(function(e) {
             e.preventDefault();
             var mobile = $.trim($('input[name=mobile]').val());
