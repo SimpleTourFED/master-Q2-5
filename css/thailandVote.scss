@@ -64,57 +64,15 @@ html, body {
   }
   .wheel {
     position: absolute;
-<<<<<<< HEAD:css/thailandVote.scss
-    top: rem(342px);
-    left: 0;
-    padding-top: rem(17px);
-    .percentbar {
-      width: rem(220px);
-      height: rem(20px);
-      border: 1px solid #000;
-      background-color: #fff;
-      margin: 0 auto;
-      overflow: hidden;
-      @include border-radius(rem(18px));
-      .left, .right {
-        min-width: rem(65px);
-        max-width: rem(155px);
-        height: rem(20px);
-        color: #f93b51;
-        font-size: rem(14px);
-        font-weight: 500;
-        margin-top: -1px;
-        padding: 0 rem(12px);
-        @include border-radius(rem(18px));
-        &:before {
-          display: inline-block;
-          content: '';
-          width: rem(14px);
-          height: rem(12.6px);
-          background: url('/images/zan.png') no-repeat center;
-          background-size: contain;
-          vertical-align: middle;
-          margin-right: 2px;
-        }
-      }
-      .left {
-        background-color: #ffdddf;
-        border: 1px solid #000;
-        border-left: none;
-        float: left;
-        line-height: rem(18px);
-=======
     width: rem(518px);
     top: rem(354px);
     left: 50%;
     margin-left: rem(-259px);
     .wheel-img {
       width: 100%;
-
       &.phone {
         -webkit-transform:rotate(0deg);
         transform:rotate(0deg);
->>>>>>> origin/master:css/thailand.scss
       }
       &.coupon {
         -webkit-transform:rotate(286deg);
