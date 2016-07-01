@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>简途旅行</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/images/logo.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/recruitment.scss??__inline"/>
+</head>
+<body>
+<div class="price-cover"></div>
+<div class="price-modal">
+    <div class="title">哇,恭喜你抽到</div>
+    <div class="priceContent">一坨大便</div>
+    <img src="/images/thailand/getPrice.png" alt="">
+    <p>稍后我们的工作人员会通过电话联系您,</p>
+    <p>请注意保持手机畅通哦!</p>
+    <button>确定</button>
+</div>
+<div class="no-price-modal">
+    <div class="title">抱歉!没有抽到哦!</div>
+    <img src="/images/thailand/noPrice.png" alt="">
+    <p>稍后我们的工作人员会通过电话联系您,</p>
+    <p>请注意保持手机畅通哦!</p>
+    <button>确定</button>
+</div>
+<div class="player">
+    <div class="banner">
+        <img src="./images/banner@2x.png" alt="">
+    </div>
+    <div class="introduction">
+        <p>7月7日简途·泰BUS首发！最精彩的线路，只等你最酷炫的玩法。成为『泰会玩』公路玩家，免费乘简途·泰BUS玩转泰国，告诉所有人：去泰国，就要像我这么玩！</p>
+    </div>
+    <div class="welfare">
+        <img src="./images/01@2x.png" alt="">
+    </div>
+    <div class="require">
+        <img src="./images/02@2x.png" alt="">
+    </div>
+    <div class="destination">
+        <div class="title">
+            <img src="./images/des-title@2x.png" alt="">
+        </div>
+        <div class="product mangu">
+            <img src="./images/btn-mangu@2x.png" alt="">
+        </div>
+        <div class="product dacheng">
+            <img src="./images/btn-dacheng@2x.png" alt="">
+        </div>
+        <div class="product batiya">
+            <img src="./images/btn-batiya@2x.png" alt="">
+        </div>
+    </div>
+    <div class="enlist">
+        <img src="./images/enlist-btn@2x.png" alt="">
+    </div>
+    <div class="lazyload">
+        <img src="./images/dacheng.png" alt="">
+        <img src="./images/mangu.png" alt="">
+        <img src="./images/batiya.png" alt="">
+    </div>
+</div>
+<div class="lottery">
+
+</div>
+<script type="text/javascript" src="/common/js/zepto.min.js"></script>
+<script type="text/javascript" src="/common/js/alert.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    $(document).ready(function() {
+        var startObj = {x: 0, y: 0};
+        var endObj = {x: 0, y: 0};
+        document.addEventListener('touchstart', function (event) {
+            startObj.x = event.touches[0].pageX;
+            startObj.y = event.touches[0].pageY;
+            endObj.x = 0;
+            endObj.y = 0;
+        })
+        document.addEventListener('touchmove', function (event) {
+            endObj.x = event.touches[0].pageX - startObj.x;
+            endObj.y = event.touches[0].pageY - startObj.y;
+        })
+        var HEIGHT = 75;
+        var $player = $('.player');
+        $('.mangu').tap(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            if (Math.abs(endObj.x) < 2 && Math.abs(endObj.y) < 2) {
+                if(!$this.hasClass('expand')) {
+                    HEIGHT += 31.675;
+                    $this.addClass('expand').find('img').attr('src','./images/mangu.png');
+                } else {
+                    HEIGHT = HEIGHT - 31.675;
+                    $this.removeClass('expand').find('img').attr('src','./images/btn-mangu@2x.png');
+                }
+                $player.css('height',HEIGHT + 'rem');
+            }
+        });
+        $('.batiya').tap(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            if (Math.abs(endObj.x) < 2 && Math.abs(endObj.y) < 2) {
+                if(!$this.hasClass('expand')) {
+                    HEIGHT += 28.3;
+                    $this.addClass('expand').find('img').attr('src','./images/batiya.png');
+                } else {
+                    HEIGHT = HEIGHT - 28.3;
+                    $this.removeClass('expand').find('img').attr('src','./images/btn-batiya@2x.png');
+                }
+                $player.css('height',HEIGHT + 'rem');
+            }
+        });
+        $('.dacheng').tap(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            if (Math.abs(endObj.x) < 2 && Math.abs(endObj.y) < 2) {
+                if(!$this.hasClass('expand')) {
+                    HEIGHT += 13.5;
+                    $this.addClass('expand').find('img').attr('src','./images/dacheng.png');
+                } else {
+                    HEIGHT = HEIGHT - 13.5;
+                    $this.removeClass('expand').find('img').attr('src','./images/btn-dacheng@2x.png');
+                }
+                $player.css('height',HEIGHT + 'rem');
+            }
+        });
+
+
+        $('#clickme').click(function(e) {
+            e.preventDefault();
+            var mobile = $.trim($('input[name=mobile]').val());
+            if(!mobile) {
+                $.alert({
+                    msg: '请输入您的手机号码'
+                });
+            } else if(!/^0?(13|14|15|17|18)[0-9]{9}$/.test(mobile)) {
+                $.alert({
+                    msg : '请输入正确的手机号码'
+                });
+            } else {
+                // 转盘
+            }
+            $('.more-btn').click(function() {
+
+            });
+        });
+        $('.enlist').click(function() {
+            // 点击报名操作
+        });
+    })
+</script>
+</body>
+</html>
