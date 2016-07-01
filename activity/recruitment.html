@@ -122,6 +122,9 @@
     $(document).ready(function() {
         var startObj = {x: 0, y: 0};
         var endObj = {x: 0, y: 0};
+        var rotateDeg = 0;
+        var HEIGHT = 75;
+        var $player = $('.player');
         document.addEventListener('touchstart', function (event) {
             startObj.x = event.touches[0].pageX;
             startObj.y = event.touches[0].pageY;
@@ -132,8 +135,7 @@
             endObj.x = event.touches[0].pageX - startObj.x;
             endObj.y = event.touches[0].pageY - startObj.y;
         })
-        var HEIGHT = 75;
-        var $player = $('.player');
+
         $('.mangu').tap(function(e) {
             e.preventDefault();
             var $this = $(this);
@@ -180,6 +182,8 @@
 
         $('#clickme').click(function(e) {
             e.preventDefault();
+            var $this = $(this);
+
             var mobile = $.trim($('input[name=mobile]').val());
             if(!mobile) {
                 $.alert({
@@ -191,10 +195,91 @@
                 });
             } else {
                 // 转盘
+                $this.addClass('loading');
+                $this.find('img').attr('src','./images/loading@2x.png');
+                $.ajax({
+                    url: '/mobile/gateway/wechat/activity/thailand/lottery',
+                    type: 'post',
+                    dataType: 'json',
+                    data:{mobile:mobile},
+                    success: function(data) {
+                        if(data.code == 0) {
+                            if(data.data == 'mobileCard') {
+                                rotateDeg += (0 - rotateDeg % 360) + 1080;
+                                setTimeout(function() {
+                                    $this.removeClass('disabled');
+                                    $('.price-cover').show();
+                                    $('.price-modal .priceContent').text('泰国当地电话卡');
+                                    $('.price-modal').show('');
+                                },4500);
+                            } else if(data.data == 'airportPickup') {
+                                rotateDeg += (72 - rotateDeg % 360) + 1080;
+                                setTimeout(function() {
+                                    $this.removeClass('disabled');
+                                    $('.price-cover').show();
+                                    $('.price-modal .priceContent').text('素万那普/廊曼机场单程接机');
+                                    $('.price-modal').show();
+                                },4500);
+                            } else if(data.data == 'tourism') {
+                                rotateDeg += (216 - rotateDeg % 360) + 1080;
+                                setTimeout(function() {
+                                    $this.removeClass('disabled');
+                                    $('.price-cover').show();
+                                    $('.price-modal .priceContent').text('泰BUS paragon-大皇宫往返车位');
+                                    $('.price-modal').show();
+                                },4500);
+                            } else if(data.data == 'coupon') {
+                                rotateDeg += (288 - rotateDeg % 360) + 1080;
+                                setTimeout(function() {
+                                    $this.removeClass('disabled');
+                                    $('.price-cover').show();
+                                    $('.price-modal .priceContent').text('泰BUS10元优惠券');
+                                    $('.price-modal').show();
+                                },4500);
+                            } else {
+                                rotateDeg += (144 - rotateDeg % 360) + 1080;
+                                setTimeout(function() {
+                                    $this.removeClass('disabled');
+                                    $('.price-cover').show();
+                                    $('.no-price-modal').show();
+                                },4500);
+                            }
+                            $this.addClass('disabled');
+                            window.scrollTo(0,0);
+                            $('.wheel-img').css({
+                                '-webkit-transition': '4s ease-in-out',
+                                'transition': '4s ease-in-out',
+                                '-webkit-transform':'rotate('+rotateDeg+'deg)',
+                                'transform':'rotate('+rotateDeg+'deg)'
+                            });
+                        } else {
+                            $.alert({
+                                msg : data.reason
+                            });
+                        }
+                        $this.removeClass('loading');
+                        $this.find('img').attr('src','./images/clickme@2x.png');
+                    },
+                    error: function() {
+                        $.alert({
+                            msg : '网络异常，请重试！'
+                        });
+                        $this.removeClass('loading');
+                        $this.find('span').text('点我抽奖');
+                    }
+                });
             }
-            $('.more-btn').click(function() {
-
-            });
+        });
+        // 关闭modal
+        $('.price-modal button').click(function(e) {
+            e.preventDefault();
+            $('.price-cover').hide();
+            $('.price-modal').hide();
+        });
+        $('.no-price-modal button').click(function(e) {
+            e.preventDefault();
+            $('.price-cover').hide();
+            $('.no-price-modal').hide();
         });
         $('.enlist').click(function() {
             // 点击报名操作

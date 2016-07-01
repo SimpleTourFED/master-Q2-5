@@ -279,3 +279,21 @@ html, body {
     }
   }
 }
+.lottery .input-gp label.disabled {
+  background-color: #bdbdbd;
+  color: white;
+}
+.lottery .input-gp label img {
+  display: none;
+  position: absolute;
+  top: .5rem;
+  left: 1.9rem;
+  z-index: 1000;
+  width:1.3rem;
+  height: 1.3rem;
+  -webkit-animation:1s linear 0s normal none infinite rotate;
+  animation:1s linear 0s normal none infinite rotate;
+}
+.lottery .input-gp label.loading img {
+  display: inline-block;
+}@-webkit-keyframes rotate{from{-webkit-transform:rotate(360deg)}to{-webkit-transform:rotate(0deg)}}@keyframes rotate{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
