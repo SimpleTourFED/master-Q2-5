@@ -78,8 +78,7 @@ html, body {
   text-align: center;
   border: 2px solid black;
   border-radius: 4px;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding: .5rem;
 }
 .no-price-modal .title,.price-modal .title {
   color: #333333;
@@ -167,5 +166,116 @@ html, body {
   }
   .lazyload {
     display: none;
+  }
+}
+.lottery {
+  position: relative;
+  width: 100%;
+  background-color: #ffde00;
+  padding-top: rem(90px);
+  padding-bottom: rem(40px);
+  .title {
+    position: absolute;
+    top: rem(-50px);
+    width: rem(432px);
+    left: 50%;
+    margin-left: rem(-216px);
+  }
+  .wheel {
+    position: relative;
+    width: rem(518px);
+    margin: 0 auto;
+    .wheel-img {
+      width: 100%;
+      &.phone {
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg);
+      }
+      &.coupon {
+        -webkit-transform:rotate(286deg);
+        transform:rotate(286deg);
+      }
+      &.single{
+        -webkit-transform:rotate(72deg);
+        transform:rotate(72deg);
+      }
+      &.round{
+        -webkit-transform:rotate(216deg);
+        transform:rotate(216deg);
+      }
+      &.thanks{
+        -webkit-transform:rotate(144deg);
+        transform:rotate(144deg);
+      }
+    }
+    .pointer-img {
+      position: absolute;
+      top:rem(188px);
+      left:rem(210px);
+      width: rem(95px);
+      height: rem(122px);
+    }
+  }
+  .input-gp {
+    position: relative;
+    @include displayflex;
+    @include flexflowRow();
+    width: rem(560px);
+    margin: .4rem auto;
+    height:rem(98px);
+    line-height: rem(94px);
+    border: 2px solid #f7ebd5;
+    color: black;
+    border-radius: 8px;
+    font-size: 0;
+    overflow: hidden;
+    label {
+      display: block;
+      width: rem(210px);
+      text-align: center;
+      font-size: .9rem;
+      background-color: #56c9ee;
+      font-weight: bold;
+      overflow: hidden;
+      vertical-align: middle;
+      img {
+        vertical-align: middle;
+        width: rem(132px);
+      }
+    }
+    input {
+      display: block;
+      @include flex(1);
+      border: 0;
+      border-radius: 0;
+      font-size: .9rem;
+      color: black;
+      text-indent: .4rem;
+      background-color: white;
+    }
+  }
+  .myPrice {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: .8rem;
+    color: black;
+    text-decoration: underline;
+  }
+  .rules {
+    margin-top: rem(60px);
+    .rules-title {
+      width: rem(300px);
+      margin: 0 auto .5rem;
+    }
+    .rules-content {
+      color: #444444;
+      font-size: .6rem;
+      padding: 0 rem(40px) 0 rem(80px);
+      ol {
+        li {
+          margin-bottom: .3rem;
+        }
+      }
+    }
   }
 }
