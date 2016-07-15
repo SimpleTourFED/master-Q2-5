@@ -49,6 +49,7 @@ $opacity: 1 !default;
   -webkit-touch-callout: none;
   box-sizing: border-box;
   outline: none;
+  word-wrap: break-word;
 }
 
 a:active, a:hover, a:link, a:visited {
@@ -78,7 +79,8 @@ html {
 
 .headerImg {
   width: 100%;
-  max-height: rem(160px);
+  height: rem(160px);
+  min-height: rem(160px);
   img {
     width: 100%;
     height: 100%;
@@ -123,52 +125,30 @@ html {
         background-size: cover;
       }
       span.bus {
-        //width: rem(18px);
-        //height: rem(20px);
-        //margin: rem(12px) rem(25px) rem(12px) rem(5px);
         background: url(/images/bus@3x.png) no-repeat center;
         background-size: cover;
       }
       span.weather {
-        //width: rem(23px);
-        //height: rem(16px);
-        //margin: rem(14px) rem(20px) rem(14px) rem(5px);
         background: url(/images/weather@3x.png) no-repeat center;
         background-size: cover;
       }
       span.stop {
-        //width: rem(16px);
-        //height: rem(20px);
-        //margin: rem(12px) rem(27px) rem(12px) rem(5px);
         background: url(/images/stop@3x.png) no-repeat center;
         background-size: cover;
       }
       span.play {
-        //width: rem(15px);
-        //height: rem(17px);
-        //margin: rem(13.5px) rem(28px) rem(13.5px) rem(5px);
         background: url(/images/play@3x.png) no-repeat center;
         background-size: cover;
       }
       span.collection {
-        //width: rem(17.5px);
-        //height: rem(18px);
-        //margin: rem(13px) rem(5px);
-        //margin: rem(13px) rem(25.5px) rem(13px) rem(5px);
         background: url(/images/collection@3x.png) no-repeat center;
         background-size: cover;
       }
       span.tips {
-        //width: rem(16px);
-        //height: rem(18.5px);
-        //margin: rem(13px) rem(27px) rem(13px) rem(5px);
         background: url(/images/tips@3x.png) no-repeat center;
         background-size: cover;
       }
       span.voice {
-        //width: rem(14.5px);
-        //height: rem(20px);
-        //margin: rem(13px) rem(28.5px) rem(13px) rem(5px);
         background: url(/images/voice@3x.png) no-repeat center;
         background-size: cover;
       }
