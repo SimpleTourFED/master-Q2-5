@@ -75,7 +75,9 @@ html, body {
 html {
   font-size: 20px;
 }
-
+.pb10{
+  padding-bottom: rem(10px);
+}
 .top_banner {
   width: rem(260px);
   height: rem(69px);
@@ -185,6 +187,12 @@ footer {
             color: #DC253B;
             font-size: rem(15px);
             padding-bottom: rem(3px);
+            word-break: keep-all;
+            max-width: rem(206px);
+            height: rem(20px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .detail {
             .sc-price,.jg-price {

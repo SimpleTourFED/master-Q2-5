@@ -202,6 +202,7 @@ footer {
         border: 1px solid #CFCFCF;
         background: #fff;
         margin-top: rem(14px);
+        margin-bottom: rem(17px);
         .left {
           @include flex(1);
           padding: rem(8px) rem(15px);
@@ -209,6 +210,12 @@ footer {
             color: #DC253B;
             font-size: rem(15px);
             padding-bottom: rem(3px);
+            word-break: keep-all;
+            max-width: rem(206px);
+            height: rem(20px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .detail {
             .sc-price,.jg-price {
@@ -239,6 +246,9 @@ footer {
           -o-border-radius: 0 4px 4px 0;
           border-radius: 0 4px 4px 0;
         }
+        &.no-mb{
+          margin-bottom: 0;
+        }
       }
       .map {
         width: rem(288px);
@@ -248,7 +258,7 @@ footer {
         font-size: rem(13px);
         color: #737373;
         line-height: rem(20px);
-        padding-bottom: rem(15px);
+        padding-bottom: rem(12px);
       }
       p.last{
         padding: 0;

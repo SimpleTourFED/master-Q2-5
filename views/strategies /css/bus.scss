@@ -99,8 +99,8 @@ html {
     border-radius: 4px;
     border: 1px solid #CFCFCF;
     background: #fff;
-    margin-top: rem(10px);
-    margin-bottom: rem(10px);
+    margin-top: rem(14px);
+    margin-bottom: rem(17px);
     .left {
       @include flex(1);
       padding: rem(8px) rem(15px);
@@ -108,9 +108,15 @@ html {
         color: #DC253B;
         font-size: rem(15px);
         padding-bottom: rem(3px);
+        word-break: keep-all;
+        max-width: rem(206px);
+        height: rem(20px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .detail {
-        .sc-price, .jg-price {
+        .sc-price,.jg-price {
           font-size: rem(12px);
           color: #535353;
           .label {
@@ -138,7 +144,7 @@ html {
       -o-border-radius: 0 4px 4px 0;
       border-radius: 0 4px 4px 0;
     }
-    &.no-mb {
+    &.no-mb{
       margin-bottom: 0;
     }
   }
