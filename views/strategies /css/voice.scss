@@ -126,6 +126,9 @@ footer {
   padidng-bottom: 0;
   .voice {
     padding-bottom: rem(30px);
+    &.no-pd{
+      padding-bottom: 0;
+    }
     .voice_title {
       color: #535353;
       font-size: rem(15px);
@@ -204,6 +207,28 @@ footer {
         &.last{
           padding: 0;
         }
+      }
+    }
+  }
+  .more{
+    text-align: right;
+    padding: rem(10px) 0 rem(20px) 0;
+    a{
+      height: rem(15px);
+      overflow: hidden;
+      display: inline-block;
+      font-size: rem(13px);
+      line-height: rem(15px);
+      color: #DC253B;
+      &:after{
+        content: '';
+        display: inline-block;
+        width: rem(12px);
+        height:rem(12px);
+        margin: rem(1px) 0 rem(1px) rem(3px);
+        vertical-align: top;
+        background: url(/images/more.png) no-repeat center;
+        background-size: cover;
       }
     }
   }
