@@ -182,6 +182,7 @@ footer {
           @include displayflex;
           @include flexflowCol();
           position: relative;
+          margin-left: 0.3rem;
           span {
             display: block;
           }
