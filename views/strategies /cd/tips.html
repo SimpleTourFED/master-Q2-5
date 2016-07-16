@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <link href="/css/tips.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/tips_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="tips">
+        <!--tips|travel-->
+        <div class="tips_title tips">
+            旅行小贴士：
+        </div>
+        <div class="tips_desc">
+            <p>
+                关于吃：不太擅长吃辣的朋友，切记要带好吗丁啉和黄连素，黄连素用来遏制吃了太多辣导致的拉个不停，吗丁啉用来预防太辣导致的胃部刺激。
+            </p>
+            <p>
+                关于民俗： 成都是许多少数民族的聚集地，旅客要尊重当地少数民族的习俗，以免引起不必要的冲突。
+            </p>
+            <p>
+                关于必备物品： 成都比较潮湿，经常下雨，出行最好随身带上伞。
+            </p>
+        </div>
+    </div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/jzg/home.html">去查看全部九寨沟攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>
