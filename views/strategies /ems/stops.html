@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>沿途巴士停靠点</title>
+    <link href="/css/stops.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/stop_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="stop">
+        <div class="stop_title stop">
+            眉山服务站
+        </div>
+        <div class="stop_desc">
+            <div class="node first last">
+                <div class="line">
+                    <span class="circle"></span>
+                </div>
+                <div class="substance">
+                    <p>
+                        眉山服务站，停靠10分钟
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stop">
+        <div class="stop_title parking">
+            目的地停车点
+        </div>
+        <div class="stop_desc">
+            <div class="node noLine">
+                <div class="substance">
+                    <p>
+                        峨眉山停车点：峨眉山大酒店停车场（蜀珍苑餐厅正对面） <br/>
+                        简途套餐住宿点：峨眉山喜雨树酒店（又名幸福树酒店）<br/>
+                    </p>
+                    <img src="/images/jzg_stop_map.png" alt="jzg_stop_map.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/djy/home.html">去查看全部峨眉山攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>
