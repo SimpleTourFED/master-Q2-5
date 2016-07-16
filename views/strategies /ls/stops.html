@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>沿途巴士停靠点</title>
+    <link href="/css/stops.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/stop_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="stop">
+        <div class="stop_title stop">
+            停靠点一：峨眉山景区
+        </div>
+        <div class="stop_desc">
+            <div class="node first last">
+                <div class="line">
+                    <span class="circle"></span>
+                    <span class="pink_line"></span>
+                    <span class="circle last"></span>
+                </div>
+                <div class="substance">
+                    <p>
+                        09：30 车辆经停峨眉山景区，休息
+                    </p>
+                    <img src="/images/ls/ems_stop.png" alt="ems_stop.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stop">
+        <div class="stop_title parking">
+            目的地停车
+        </div>
+        <div class="stop_desc">
+            <div class="node noLine">
+                <div class="substance">
+                    <p>
+                        乐山大佛停车点：乐山大佛嘉定坊游客中心<br>
+                    </p>
+                    <img src="/images/ls/jdf_stop.jpg" alt="jdf_stop.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/ls/home.html">去查看全部乐山攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>
