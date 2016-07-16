@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>熊猫基地玩法</title>
+    <link href="/css/play.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/play_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="play">
+        <!--ticket|spot|location-->
+        <div class="play_title ticket">
+            门票详情
+        </div>
+        <div class="play_desc">
+            <div class="product_ticket first">
+                <div class="low_season">
+                    <span class="label">熊猫基地门票：</span>
+                    <span class="price">58元/人</span>
+                </div>
+            </div>
+            <div class="product_ticket first">
+                <div class="low_season">
+                    <span class="label">园内旅游观光车：</span>
+                    <span class="price">10元/人</span>
+                </div>
+            </div>
+            <div class="ticket">
+                <div class="left">
+                    <div class="title">大熊猫繁育研究基地门票</div>
+                    <div class="detail">
+                                <span class="sc-price">
+                                    <span class="lable">市场价</span>
+                                    <span>58</span>
+                                </span>
+                                <span class="jg-price">
+                                    <span class="label">抢购价</span>
+                                    <span>58</span>
+                                </span>
+                    </div>
+                </div>
+                <a href="http://m.simpletour.com/mobile/gateway/wechat/product/product/detail/11" class="right">立即抢购</a>
+            </div>
+            <div class="product_ticket first">
+                <div class="product_name">优惠政策：</div>
+                <div class="low_season">
+                    <span class="label">学生票、60 周岁-70 周岁老年票半价，请携带相关证件至景区售票厅购买。</span>
+                </div>
+                <div class="product_name">免票政策：</div>
+                <div class="low_season">
+                    <span class="label">1、 6周岁（含）以下或1.3米（含）以下的儿童免票；</span>
+                </div>
+                <div class="low_season">
+                    <span class="label">2、 70周岁（含）以上的老人免票（十一、春节黄金周期间实行半票；其余时间实行免票）；</span>
+                </div>
+                <div class="low_season">
+                    <span class="label">3、 现役军人 、残疾军人免费；</span>
+                </div>
+                <div class="low_season">
+                    <span class="label">4、 残疾人免费。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="play">
+        <!--ticket|spot|location-->
+        <div class="play_title spot">
+            景点介绍
+        </div>
+        <div class="play_desc">
+            <div class="text_content">
+                <p>
+                    来到萌萌胖达们的老家，当然要去看看胖达们的温馨小窝啦~作为一个在地球上已经生活了超过800万年的物种，它同时期生活的物种已经基本灭绝，只有我们熊猫宝宝们还在欢乐地繁衍生存在这颗地球上。也是因为这个原因，熊猫宝宝被称为是“活化石”和“中国国宝”。
+                </p>
+                <p>
+                    熊猫基地关键词：萌萌萌、吃吃吃
+                </p>
+                <img style="margin-bottom: .5rem" src="/images/xmjd/xmjd1.jpg" alt="qcs.jpg"/>
+                <p>
+                    熊猫基地的步行游览时间在三个小时左右，若乘坐观光车游览则只需1～1.5个小时。小简建议大家如果体力身体不错的话都可以步行哦，熊猫基地整体的环境非常优美，整个气候也非常凉爽，所以大家可以尽情感受我们国宝的生活环境~
+                </p>
+                <p>
+                    想坐观光车游览的朋友，大家可以乘坐观光电瓶车到达阳光产房，看看出生不久的小熊猫然后原路返回依次参观不同的大熊猫馆，观看熊猫教育电影，直到返回至停车场。
+                </p>
+                <p class="last">
+                    步行的朋友就可以顺着地图指示对各个熊猫馆进行游览了，景区内部的指示非常清楚哦，每个小的景点也都有景区地图，你只需要注意不要有遗漏的景点就可以啦~
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/xmjd/home.html">去查看全部熊猫基地攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>
