@@ -122,6 +122,18 @@ footer {
 }
 .content {
   padding: rem(5px) rem(16px) 0 rem(16px);
+  .pt10{
+    padding-top: rem(10px);
+  }
+  .pb10{
+    padding-bottom: rem(10px);
+  }
+  .pt15{
+    padding-top: rem(15px);
+  }
+  .pb15{
+    padding-bottom: rem(15px);
+  }
   .tips {
     padding-bottom: rem(30px);
     .tips_title {

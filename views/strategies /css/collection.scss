@@ -126,6 +126,14 @@ footer {
 }
 
 .content {
+  img.map{
+    width: 100%;
+    height: auto;
+  }
+  img{
+    width: 100%;
+    height: rem(144px);
+  }
   padding: rem(5px) rem(16px) 0 rem(16px);
   padidng-bottom: 0;
   .collection {

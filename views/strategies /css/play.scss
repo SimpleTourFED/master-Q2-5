@@ -124,7 +124,9 @@ footer {
 
 .content {
   padding: rem(5px) rem(16px) 0 rem(16px);
-  padidng-bottom: 0;
+  .pt10{
+    padding-top: rem(10px);
+  }
   .play {
     padding-bottom: rem(30px);
     .play_title {
@@ -183,7 +185,7 @@ footer {
             @include flex(1);
           }
           .price {
-            width: rem(70px);
+            width: rem(100px);
             text-align: right;
           }
         }
@@ -252,7 +254,37 @@ footer {
       }
       .map {
         width: rem(288px);
-        height: rem(301px);
+        height: auto;
+      }
+      table{
+        width: 100%;
+        font-size: rem(13px);
+        color: #737373;
+        border-top: 1px solid #CFCFCF;
+        border-left: 1px solid #CFCFCF;
+        td{
+          font-size: rem(12px);
+        }
+        td.one{
+          width: 24%;
+        }
+        td.two{
+          width: 38%;
+        }
+        td.three{
+          width: 38%;
+        }
+        th{
+          background-color: #eee;
+        }
+        td,th{
+         border-bottom: 1px solid #CFCFCF;
+          border-right: 1px solid #CFCFCF;
+          height: rem(28px);
+          line-height: rem(28px);
+          text-align: center;
+          padding: rem(3px);
+        }
       }
       p{
         font-size: rem(13px);
@@ -271,11 +303,14 @@ footer {
         color: #737373;
         line-height: rem(20px);
         padding-bottom: rem(10px);
+        &.no-pb{
+         padding-bottom: 0;
+        }
       }
       .img_desc{
         img{
           width: rem(288px);
-          height: rem(144px);
+          min-height: rem(144px);
         }
       }
     }
