@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>沿途巴士停靠点</title>
     <link href="/css/stops.scss?__inline" rel="stylesheet" type="text/css"/>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
 </head>
 <body>
 <div class="top_banner">
@@ -27,7 +28,7 @@
                     <p>
                         8：45-抵达映秀镇，小简给大家留出了一个小时的充足时间来参观地震遗址。但由于5-11月是九寨沟的旅游旺季，经常会出现堵车状况，所以为了节省大家时间，我们在5-11月期间会不做停留，请大家理解。
                     </p>
-                    <img src="/images/jzg/jzg_stop_001.jpg" alt="jzg_stop_001.jpg"/>
+                    <img src="/images/jzg/jzg_stops_yxdzyz.jpg" alt="jzg_stops_yxdzyz.jpg"/>
                 </div>
             </div>
             <div class="node last">
@@ -40,7 +41,7 @@
                     <p>
                         10:35途经5.12大地震震中城市汶川
                     </p>
-                    <img src="/images/jzg/jzg_stop_002.jpg" alt="jzg_stop_002.jpg"/>
+                    <img src="/images/jzg/jzg_stops_wc.jpg" alt="jzg_stops_wc.jpg"/>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
                     <p>
                         12:30抵达高原堰塞湖【叠溪海子】，车辆停靠一小时，大家可以尽情用餐和游玩。
                     </p>
-                    <img src="/images/jzg/jzg_stop_003.jpg" alt="jzg_stop_003.jpg"/>
+                    <img src="/images/jzg/jzg_stops_dxhz.jpg" alt="jzg_stops_dxhz.jpg"/>
                 </div>
             </div>
         </div>
@@ -80,7 +81,7 @@
                     <p>
                         15：30 抵达【松潘古城】，小简留出了一小时时间让大家感受古城的历史沧桑感。松潘是历史上有名的边陲重镇，被称作“川西门户”，是川、甘、青三地茶马贸易的集散地，有“高原古城”之称，至今已有2300多年历史。
                     </p>
-                    <img src="/images/jzg/jzg_stop_004.jpg" alt="jzg_stop_004.jpg"/>
+                    <img src="/images/jzg/jzg_stops_spgcq.jpg" alt="jzg_stops_spgcq.jpg"/>
                     <div class="ticket">
                         <div class="left">
                             <div class="title">松潘古镇门票</div>
@@ -114,7 +115,8 @@
                         简途套餐住宿点：寻迹丽景山舍酒店<br/>
                         简途高端套餐住宿点：九寨天堂甲蕃古城假日酒店&九寨天堂洲际酒店
                     </p>
-                    <img src="/images/jzg_stop_map.png" alt="jzg_stop_map.png"/>
+                    <!--<img src="/images/jzg_stop_map.png" alt="jzg_stop_map.png"/>-->
+                    <div id="map" style="width:100%;height:200px"></div>
                 </div>
             </div>
         </div>
@@ -150,6 +152,26 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
+    var position = function(id,detail){
+        var service = new qq.maps.Geocoder(),map,marker;
+        service.setComplete(function(data){
+            var center = new qq.maps.LatLng(data.detail.location.lat,data.detail.location.lng);
+            map = new qq.maps.Map(document.getElementById(id),{
+                center : center,
+                zoom : 15
+            })
+            marker = new qq.maps.Marker({
+                position:center,
+                map:map
+            })
+        })
+        service.setError(function(data){
+            console.error(data + ',error');
+        })
+        service.getLocation(detail);
+    }
+
+    position('map','峨眉山大酒店停车场');
 </script>
 </body>
 </html>

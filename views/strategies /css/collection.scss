@@ -207,6 +207,12 @@ footer {
       .pb15 {
         padding-bottom: rem(15px);
       }
+      .mb10{
+        margin-bottom: rem(10px);
+      }
+      .mt10{
+        margin-top: rem(10px);
+      }
       .gTitle {
         padding-bottom: rem(5px);
         color: #535353;
@@ -315,7 +321,7 @@ footer {
         }
         .recommend_content {
           img {
-            padding-top: rem(10px);
+            margin-top: rem(10px);
           }
         }
       }
