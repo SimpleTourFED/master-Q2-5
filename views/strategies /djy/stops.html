@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>沿途巴士停靠点</title>
     <link href="/css/stops.scss?__inline" rel="stylesheet" type="text/css"/>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
 </head>
 <body>
 <div class="top_banner">
@@ -182,7 +183,8 @@
                     <p>
                         都江堰：古城停车场<br/>
                     </p>
-                    <img src="/images/jzg_stop_map.png" alt="jzg_stop_map.png"/>
+                    <!--<img src="/images/jzg_stop_map.png" alt="jzg_stop_map.png"/>-->
+                    <div id="map" style="width:100%;height:200px"></div>
                 </div>
             </div>
         </div>
@@ -218,6 +220,26 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
+    var position = function(id,detail){
+        var service = new qq.maps.Geocoder(),map,marker;
+        service.setComplete(function(data){
+            var center = new qq.maps.LatLng(data.detail.location.lat,data.detail.location.lng);
+            map = new qq.maps.Map(document.getElementById(id),{
+                center : center,
+                zoom : 15
+            })
+            marker = new qq.maps.Marker({
+                position:center,
+                map:map
+            })
+        })
+        service.setError(function(data){
+            console.error(data + ',error');
+        })
+        service.getLocation(detail);
+    }
+
+    position('map','都江堰古城停车场')
 </script>
 </body>
 </html>
