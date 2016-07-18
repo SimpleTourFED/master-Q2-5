@@ -93,6 +93,7 @@ html {
 }
 
 footer {
+  padding: .65rem 0 1.5rem;
   a {
     display: block;
     width: rem(288px);
@@ -100,7 +101,7 @@ footer {
     line-height: rem(44px);
     color: #fff;
     font-size: rem(14px);
-    margin: rem(13px) auto rem(30px);
+    margin: 0 auto;
     text-align: center;
     background-color: #DC253B;
     -webkit-border-radius: 4px;
@@ -223,8 +224,8 @@ footer {
       &:after{
         content: '';
         display: inline-block;
-        width: rem(12px);
-        height:rem(12px);
+        width: rem(13px);
+        height:rem(13px);
         margin: rem(1px) 0 rem(1px) rem(3px);
         vertical-align: top;
         background: url(/images/more.png) no-repeat center;
