@@ -305,6 +305,7 @@ footer {
         .titleLine {
           @include displayflex;
           @include flexflowRow();
+          font-size: 0;
           padding: rem(17px) 0 rem(10px) 0;
           .text {
             width: rem(60px);
@@ -321,12 +322,16 @@ footer {
             -o-border-radius: rem(15px);
             border-radius: rem(15px);
             margin: 0 rem(10px);
+            display: inline-block;
+            vertical-align: top;
           }
           .redline {
+            width: rem(100px);
             height: 1px;
             margin-top: rem(11px);
             background-color: #DC253B;
             display: inline-block;
+            vertical-align: top;
             @include flex(1);
           }
         }
