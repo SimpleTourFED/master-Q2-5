@@ -49,7 +49,6 @@ $opacity: 1 !default;
   -webkit-touch-callout: none;
   box-sizing: border-box;
   outline: none;
-  word-wrap: break-word;
 }
 
 a:active, a:hover, a:link, a:visited {
@@ -71,6 +70,7 @@ html, body {
   height: 100%;
   font-size: 20px;
   background: #F6F6F6;
+  overflow: auto;
 }
 
 html {
@@ -97,12 +97,20 @@ html {
   }
   ul {
     li a {
+      display: block;
       border-bottom: 1px solid #D7D7D7;
       line-height: rem(44px);
       @include displayflex;
       @include flexflowRow();
+      font-size: 0;
+      overflow: hidden;
       &.last {
         border-bottom: none;
+      }
+      span{
+        display: inline-block;
+        font-size: rem(14px);
+        vertical-align: middle;
       }
       span.icon{
         width: rem(28px);
@@ -110,11 +118,13 @@ html {
         margin: rem(8px) rem(20px) rem(8px) rem(2px);
       }
       span.center {
+        min-width: rem(214px);
         height: rem(44px);
         font-size: rem(14px);
         color: #737373;
         vertical-align: middle;
         @include flex(1);
+        //border: 1px solid green;
       }
       span.arrow {
         display: inline-block;
