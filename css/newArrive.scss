@@ -1,0 +1,212 @@
+@import "/common/css/base";
+body {
+  background-color: #F6F6F6;
+}
+::-webkit-input-placeholder { color:#FF527A; }
+input:-moz-placeholder { color:#FF527A; }
+.page-group {
+  @include displayflex;
+  @include flexflowCol();
+}
+.page {
+  top: 4rem;
+  @include flex(1);
+}
+.search-bar {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: rem(40px);
+  line-height: rem(40px);
+  padding-right: rem(40px);
+  background-color: #D71345;
+  z-index: 100;
+  @include displayflex;
+  @include flexflowRow();
+  .back {
+    width: rem(34px);
+    height: 100%;
+    background: url(/images/back.png) no-repeat center;
+    background-size: .45rem .8rem;
+    text-indent: -9999px;
+  }
+  .search-input {
+    font-size:0;
+    position: absolute;
+    top: rem(6px);
+    width: rem(248px);
+    height: rem(28px);
+    line-height: rem(28px);
+    padding-left: rem(10px);
+    background-color: #B90030;
+    border-radius: 4px;
+    z-index: 100;
+    @include flex(1);
+    @include displayflex;
+    @include flexflowRow();
+    label {
+      display: inline-block;
+      width: rem(14px);
+      height: 100%;
+      background: url(/images/search-icon@2x.png) no-repeat center;
+      background-size: contain;
+    }
+    input {
+      display: inline-block;
+      @include flex(1);
+      font-size: .7rem;
+      color: white;
+      border: 0;
+      height: 100%;
+      background-color: transparent;
+      padding: .2rem .35rem .2rem rem(12px);
+    }
+  }
+}
+
+.search-result {
+  display: none;
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  height:100%;
+  top: 2rem;
+  overflow: auto;
+  padding-left: rem(15px);
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+  &.show {
+    display: block;
+  }
+  .result {
+    display: none;
+    height: rem(40px);
+    line-height: rem(40px);
+    border-bottom: 1px solid #F0F0F0;
+    font-size: .7rem;
+    color: #737373;
+  }
+}
+.navBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(40px);
+  z-index: 100;
+  ul {
+    list-style: none;
+    width: 100%;
+    li {
+      float: left;
+      box-sizing: border-box;
+      width: rem(80px);
+      height: rem(40px);
+      line-height: rem(38px);
+      text-align: center;
+      font-size: .7rem;
+      color: #BDBDBD;
+      &.selected {
+        color: #D71345;
+        border-bottom: 2px solid #D71345;
+      }
+    }
+  }
+}
+.right-navBar {
+  position: absolute;
+  top: 6rem;
+  right: rem(10px);
+  width: rem(16px);
+  background-color: #000;
+  opacity: .4;
+  z-index: 101;
+  ul {
+    list-style: none;
+    li {
+      font-size: .5rem;
+      color: white;
+    }
+  }
+}
+.hot-place {
+  width: 100%;
+  background-color: #BDBDBD;
+  padding: rem(10px) 0 rem(16px) rem(12px);
+  h5 {
+    display: inline-block;
+    font-size: .6rem;
+    color: white;
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: bottom;
+      width: rem(15px);
+      height:rem(15px);
+      margin-left: rem(8px);
+      line-height: rem(10px);
+      background: url(/images/hot-icon@2x.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      margin: rem(12px) rem(10px) 0 0;
+      padding-left: rem(7px);
+      padding-right: rem(6px);
+      float: left;
+      width: rem(84px);
+      height: rem(32px);
+      text-align: center;
+      line-height: rem(32px);
+      font-size: .7rem;
+      color: #737373;
+      background-color: #fff;
+      border-radius: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.selected {
+        color: #D71345;
+        border: 1px solid #D71345;
+      }
+    }
+  }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+  }
+}
+.destinations {
+  width: 100%;
+  .destination {
+    width: 100%;
+    .letter {
+      padding-left: rem(15px);
+      width: 100%;
+      height: rem(30px);
+      line-height: rem(30px);
+      background-color: #F0F0F0;
+      color: #424242;
+      font-size: .7rem;
+    }
+    .content {
+      background-color: white;
+      padding-left: rem(15px);
+      .item {
+        height: rem(40px);
+        line-height: rem(40px);
+        font-size: .7rem;
+        color: #737373;
+        border-bottom: 1px solid #F0F0F0;
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -302,7 +302,7 @@ header ~ .page-content{
   100% {
     -webkit-transform: translate3d(20%, 0, 0);
     transform: translate3d(20%, 0, 0);
-    opacity: $opacity;
+    opacity: .9;
   }
 }
 @-webkit-keyframes pageFromCenterToLeft {
@@ -312,9 +312,9 @@ header ~ .page-content{
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
-    opacity: $opacity;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: .8;
   }
 }
 @keyframes pageFromCenterToLeft {
@@ -324,9 +324,9 @@ header ~ .page-content{
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate3d(-20%, 0, 0);
-    transform: translate3d(-20%, 0, 0);
-    opacity: $opacity;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: .8;
   }
 }
 @-webkit-keyframes pageFromLeftToCenter {
