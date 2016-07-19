@@ -85,7 +85,6 @@
                 recalc = function () {
                     var clientWidth = docEl.clientWidth;
                     if (!clientWidth) return;
-                    // 针对uc横竖屏rem html没有重绘的问题
                     var style;
                     if (style = document.getElementById("forhtml")) {
                         style.parentNode.removeChild(style);
@@ -94,7 +93,6 @@
                     style.id = "forhtml";
                     document.head.appendChild(style);
                     style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
-                    //
                     docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
                 };
         recalc();

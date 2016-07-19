@@ -7,22 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>旅行小贴士</title>
     <link href="/css/tips.scss?__inline" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var style;
+                        if (style = document.getElementById("forhtml")) {
+                            style.parentNode.removeChild(style);
+                        }
+                        style = document.createElement("style");
+                        style.id = "forhtml";
+                        document.head.appendChild(style);
+                        style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                        docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                        alert(20 * (clientWidth / 320)*0.65);
+                    };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
 </head>
 <body>
-<div class="top_banner">
-    <img src="/images/tips_top_banner.png" alt="banner"/>
-</div>
 <div class="main">
+    <div class="top_banner">
+        <img src="/images/tips_top_banner.png" alt="banner"/>
+    </div>
     <div class="content">
         <div class="tips">
             <!--tips|travel-->
-            <div class="tips_title tips">
+            <div class="tips_title">
+                <span class="tip"></span>
                 注意事项
             </div>
             <div class="tips_desc">
                 <p>
-                    1、九寨沟区属中高海拔地区，一般旅游者不会有太大的高山反应，但也要量力而行，游客不宜剧烈运动，宜少饮酒，多食蔬菜、水果，以防发生高山
-                    反应。年老体弱者，应备好常用药品，最好能配备小型氧气瓶(此物可以成都购买)。小简提醒喜好喝酒的朋友在九寨就不要喝太多了哦~
+                    1、九寨沟区属中高海拔地区，一般旅游者不会有太大的高山反应，但也要量力而行，游客不宜剧烈运动，宜少饮酒，多食蔬菜、水果，以防发生高山反应。年老体弱者，应备好常用药品，最好能配备小型氧气瓶(此物可以成都购买)。小简提醒喜好喝酒的朋友在九寨就不要喝太多了哦~
                 </p>
                 <p>
                     2、爱好摄影、登山的朋友，请带好有关器材，多备电池或胶卷，景区内价格较贵。
@@ -43,7 +67,8 @@
                         <p>A&nbsp;&nbsp;藏族人绝对禁吃驴、马肉和狗肉，有些地区也不吃鱼肉；</p>
 
                         <p>
-                            B&nbsp;&nbsp;敬酒时，客人须先用无名指蘸一点酒弹向空中，连续三次，以示祭天，地和祖先，接着轻轻呷一口，主人会及时添满，再喝一口再添满，连喝三口，至第四次添满时，必须一饮而尽；</p>
+                            B&nbsp;&nbsp;敬酒时，客人须先用无名指蘸一点酒弹向空中，连续三次，以示祭天，地和祖先，接着轻轻呷一口，主人会及时添满，再喝一口再添满，连喝三口，至第四次添满时，必须一饮而尽；
+                        </p>
 
                         <p>C&nbsp;&nbsp;吃饭时要食不满口，咬不出声，喝不出响；</p>
 
@@ -64,7 +89,8 @@
         </div>
         <div class="tips">
             <!--tips|travel-->
-            <div class="tips_title travel">
+            <div class="tips_title">
+                <span class="travel"></span>
                 旅行必备
             </div>
             <div class="tips_desc">
@@ -81,34 +107,11 @@
             <img src="/images/bottom_banner@3x.png" alt="banner"/>
         </div>
         <footer>
-            <a href="/jzg/home.html">去查看全部九寨沟攻略</a>
+            <a id="jump" href="/jzg/home.html">去查看全部九寨沟攻略</a>
         </footer>
     </div>
 </div>
-<script type="text/javascript">
-    (function (doc, win) {
-        var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function () {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) return;
-                    // 针对uc横竖屏rem html没有重绘的问题
-                    var style;
-                    if (style = document.getElementById("forhtml")) {
-                        style.parentNode.removeChild(style);
-                    }
-                    style = document.createElement("style");
-                    style.id = "forhtml";
-                    document.head.appendChild(style);
-                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
-                    //
-                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-                };
-        recalc();
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
+<script>
 </script>
 </body>
 </html>
