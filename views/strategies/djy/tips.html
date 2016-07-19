@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <link href="/css/tips.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="/images/tips_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="tips">
+            <!--tips|travel-->
+            <div class="tips_title tips">
+                小贴士：
+            </div>
+            <div class="tips_desc">
+                <p>
+                    与青城山气候相似，夏季可能会多雨，大家记得带伞，以及准备好保暖衣物~小简提醒喜好喝酒的朋友在九寨就不要喝太多了哦~<br/>
+                    接下来，跟着小简继续去熊猫乐园看一看~
+                </p>
+                <img class="pb15" src="/images/djy/djy_tips_001.png" alt="djy_tips_001.png">
+                <p>
+                    来到四川就要看过萌萌的胖达们再走呀~~除去熊猫基地，还有熊猫乐园也生活着20个健康的熊猫宝宝。熊猫乐园是世界唯一的以大熊猫疾病防控、野外救护为主的科研中心，这个研究中心区别于传统动物园，它依山而建，每个园子半开放式，可以近距观察拍摄大熊猫。<br/>
+                </p>
+                <p>
+                    各位游玩的朋友可以步行健康步道，也可以乘坐观光车，内部会由讲解员带领大家深入了解大熊猫。
+                </p>
+                <p class="last">
+                    熊猫乐园内可供观赏区的有四个园：盼盼园、双楠园、临泽园、蝶泉园，共可观看到20只大熊猫。里面最有名的当属熊猫“盼盼”和“泰山”了，大家可以在盼盼园里看到这两位“名人”。熊猫"盼盼"是国内外著名的熊猫明星，曾代表中国野生动物保护协会访问美国半年，轰动美国西海岸，当地市民排5个小时的队，只能看她3分钟。同时盼盼也是1990年北京亚运会的吉祥物，当年那个可爱可亲的形象着实随着一股亚洲雄风火了一把。而熊猫泰山则是唯一一只在华盛顿国家动物园出生并幸存下来的熊猫，现在也“荣归故里”了,大家快去一睹胖达们萌萌的憨样吧！
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="/images/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a href="/djy/home.html">去查看全部都江堰攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

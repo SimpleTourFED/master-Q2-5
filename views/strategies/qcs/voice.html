@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>目的地语音导览</title>
+    <link href="/css/voice.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/voice_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="voice">
+        <!--zan|spot-->
+        <div class="voice_title spot">
+            青城山
+        </div>
+        <div class="voice_desc">
+            <div class="node last">
+                <div class="node_content">
+                    <p>
+                        青城山（Mount Qingcheng） ，世界文化遗产，全国重点文物保护单位，国家重点风景名胜区，国家5A级旅游景区，全球道教全真道圣地，中国四大道教名山之一，中国道教发祥地之一。
+                    </p>
+                    <img src="/images/qcs/qcs.jpg" alt="">
+                    <p>青城山位于成都市都江堰市西南，东距成都市区68公里，处于都江堰水利工程西南10公里处。景区面积200平方千米，最高峰老君阁海拔1260米，青城山分为前山和后山，群峰环绕起伏、林木葱茏幽翠，享有“青城天下幽”的美誉。</p>
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voice no-pd">
+        <!--zan|spot-->
+        <div class="voice_title zan">
+            青城山必游景点
+        </div>
+        <div class="voice_desc">
+            <div class="node">
+                <div class="node_title">
+                    建福宫
+                </div>
+                <div class="node_content">
+                    <p>
+                        建福宫作为青城山的起点，始建于唐代。宫前古木苍翠，四周五峰环列，气势宏伟。上行不远有鬼城山，传为战国时鬼谷子隐居处。
+                    </p>
+                    <img src="/images/qcs/jianfugong.jpg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node">
+                <div class="node_title">
+                    天然图画坊
+                </div>
+                <div class="node_content">
+                    <p>
+                        画坊建于光绪年间，右有横石卧于两山之间的悬崖上，被称为“天仙桥”，传为仙人聚会游戏处。
+                    </p>
+                    <img src="/images/qcs/trthf.jpg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node">
+                <div class="node_title">
+                    天师洞
+                </div>
+                <div class="node_content">
+                    <p>
+                        传说是张道陵天师结茅居住过的地方，所以一般人都称它为“天师洞”。现存殿宇建于清末，规模宏伟，雕刻精细，并有不少珍贵文物和古树。相传东汉末年张道陵曾在此讲经传道。
+                    </p>
+                    <img src="/images/qcs/tianshidong.jpeg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node last">
+                <div class="node_title">
+                    上清宫
+                </div>
+                <div class="node_content">
+                    <p>
+                        上清宫始建于晋代，现存庙宇为清朝同治年间所建，上有“天下第五名山”、“青城第一峰”等摩崖石刻，宫门“上清宫”三字由蒋介石题寅。
+                    </p>
+                    <img src="/images/qcs/sqg.jpeg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+        <a href="#">更多</a>
+    </div>
+</div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/qcs/home.html">去查看全部青城山攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <link href="/css/tips.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+    <div class="main">
+        <div class="top_banner">
+            <img src="/images/tips_top_banner.png" alt="banner"/>
+        </div>
+        <div class="content">
+            <div class="tips">
+                <!--tips|travel-->
+                <div class="tips_title tips">
+                    注意事项
+                </div>
+                <div class="tips_desc">
+                    <p>
+                        1、峨眉山金顶海拔3100米，属于高山区，高山区和低山区温差12度左右，所以上山一定要穿合适保暖衣物。
+                    </p>
+                    <p>
+                        2、与猴大王交往需谨慎，尽量把随身物品装在包里，拉好拉链，空手过猴区，要知道峨眉山的强盗猴可不是浪得虚名的；
+                    </p>
+                    <p>
+                        3、给猴大王拍照时，请保持一定距离，以免被误伤；
+                    </p>
+                    <p>
+                        4、经过猴区时尽量跟随人群，别穿太鲜艳的衣服，容易吸引猴大王注意；
+                    </p>
+                    <p>
+                        5、猴大王爬到身上时不要乱动，也不要抓打猴大王，以免猴子伤人；
+                    </p>
+                    <p class="last">
+                        6、建议找猴区管理员买猴粮，否则遇到猴子耍无赖管理员可不会帮你哦~
+                    </p>
+                </div>
+            </div>
+            <div class="tips">
+                <!--tips|travel-->
+                <div class="tips_title travel">
+                    旅行必备
+                </div>
+                <div class="tips_desc">
+                    <p>1、山区多雨，建议带好雨具，峨眉山可没有白素贞送伞哦~</p>
+
+                    <p class="last">2、由于山区的食物都是由山脚运输上去的，所以相对较贵，所以最好自己带一点高能量的食物。</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_banner">
+                <img src="/images/bottom_banner@3x.png" alt="banner"/>
+            </div>
+            <footer>
+                <a href="/ems/home.html">去查看全部峨眉山攻略</a>
+            </footer>
+        </div>
+    </div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>
