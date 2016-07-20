@@ -315,14 +315,12 @@
         $('.search-input input').focusin(function (e) {
             $('.search-result').addClass('show');
         })
-//                .focusout(function (e) {
-//            $('.search-result').removeClass('show');
-//        });
         $('.page').height($(window).height() - $('.search-bar').height() * 2);
         $('.turnTo').click(function (e) {
             $('.turnTo').removeClass('selected');
             $(this).addClass('selected');
         });
+        $('.right-navBar').css("top",($(window).height() - $('.search-bar').height() * 2 - $('.right-navBar').height())/2 + $('.search-bar').height() * 2);
 
     })
 </script>

@@ -120,11 +120,16 @@ input:-moz-placeholder { color:#FF527A; }
   right: rem(10px);
   width: rem(16px);
   background-color: #000;
+  padding: rem(17px) 0;
+  border-radius: 10px;
   opacity: .4;
   z-index: 101;
+  text-align: center;
   ul {
     list-style: none;
     li {
+      width: rem(16px);
+      height: rem(14px);
       font-size: .5rem;
       color: white;
     }
