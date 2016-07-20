@@ -2,39 +2,39 @@ $baseFontSize : 20px !default;
 $red : #D71345 !default;
 $opacity: 1 !default;
 @function rem($px) {
-    @return $px / $baseFontSize * 1rem;
+  @return $px / $baseFontSize * 1rem;
 }
 @mixin displayflex{
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 @mixin flex($size:1){
-	-webkit-box-flex:$size;
-	-moz-box-flex:$size;
-	-webkit-flex:$size;
-	-ms-flex:$size;
-	flex:$size;
+  -webkit-box-flex:$size;
+  -moz-box-flex:$size;
+  -webkit-flex:$size;
+  -ms-flex:$size;
+  flex:$size;
 }
 @mixin flexflowCol($direction:column,$dir:vertical){
-	-webkit-box-orient:$dir;
-	-ms-box-orient: $dir;
-	-moz-box-orient: $dir;
-	-webkit-flex-flow:$direction nowrap;
-	-ms-flex-flow:$direction nowrap;
-	-moz-flex-flow:$direction nowrap;
-	flex-flow:$direction nowrap;
+  -webkit-box-orient:$dir;
+  -ms-box-orient: $dir;
+  -moz-box-orient: $dir;
+  -webkit-flex-flow:$direction nowrap;
+  -ms-flex-flow:$direction nowrap;
+  -moz-flex-flow:$direction nowrap;
+  flex-flow:$direction nowrap;
 }
 @mixin flexflowRow($direction:row,$dir:horizontal) {
-    -webkit-box-orient:$dir;
-	-ms-box-orient: $dir;
-	-moz-box-orient: $dir;
-	-webkit-flex-flow:$direction nowrap;
-	-ms-flex-flow:$direction nowrap;
-	-moz-flex-flow:$direction nowrap;
-	flex-flow:$direction nowrap;
+  -webkit-box-orient:$dir;
+  -ms-box-orient: $dir;
+  -moz-box-orient: $dir;
+  -webkit-flex-flow:$direction nowrap;
+  -ms-flex-flow:$direction nowrap;
+  -moz-flex-flow:$direction nowrap;
+  flex-flow:$direction nowrap;
 }
 @mixin shadow($x:0,$y:0px,$z:5px,$color:#bdbdbd) {
   box-shadow : $x $y $z $color;
@@ -302,7 +302,7 @@ header ~ .page-content{
   100% {
     -webkit-transform: translate3d(20%, 0, 0);
     transform: translate3d(20%, 0, 0);
-    opacity: .9;
+    opacity: $opacity;
   }
 }
 @-webkit-keyframes pageFromCenterToLeft {
@@ -312,9 +312,9 @@ header ~ .page-content{
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    opacity: .8;
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+    opacity: $opacity;
   }
 }
 @keyframes pageFromCenterToLeft {
@@ -324,9 +324,9 @@ header ~ .page-content{
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    opacity: .8;
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+    opacity: $opacity;
   }
 }
 @-webkit-keyframes pageFromLeftToCenter {
