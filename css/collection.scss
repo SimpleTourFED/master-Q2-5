@@ -304,8 +304,8 @@ footer {
       }
       .recommend {
         .titleLine {
-          //@include displayflex;
-          //@include flexflowCol();
+          @include displayflex;
+          @include flexflowRow();
           font-size: 0;
           padding: rem(17px) 0 rem(10px) 0;
           .text {
@@ -333,7 +333,7 @@ footer {
             background-color: #DC253B;
             display: inline-block;
             vertical-align: top;
-            //@include flex(1);
+            @include flex(1);
           }
         }
         .recommend_content {
