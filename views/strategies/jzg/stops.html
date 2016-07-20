@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
     <meta name="format-detection" content="telephone=no;email=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>沿途巴士停靠点</title>
@@ -14,38 +15,38 @@
     <img src="/images/stop_top_banner.png" alt="banner"/>
 </div>
 <div class="content">
-    <!--<div class="stop">-->
-        <!--<div class="stop_title stop">-->
-            <!--停靠点一：映秀镇-->
-        <!--</div>-->
-        <!--<div class="stop_desc">-->
-            <!--<div class="node first">-->
-                <!--<div class="line">-->
-                    <!--<span class="circle"></span>-->
-                    <!--<span class="pink_line"></span>-->
-                <!--</div>-->
-                <!--<div class="substance">-->
-                    <!--<p>-->
-                        <!--8：45-抵达映秀镇，小简给大家留出了一个小时的充足时间来参观地震遗址。但由于5-11月是九寨沟的旅游旺季，经常会出现堵车状况，所以为了节省大家时间，我们在5-11月期间会不做停留，请大家理解。-->
-                    <!--</p>-->
-                    <!--<img src="/images/jzg/jzg_stops_yxdzyz.jpg" alt="jzg_stops_yxdzyz.jpg"/>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="node last">-->
-                <!--<div class="line">-->
-                    <!--<span class="circle"></span>-->
-                    <!--<span class="pink_line"></span>-->
-                    <!--<span class="circle last"></span>-->
-                <!--</div>-->
-                <!--<div class="substance">-->
-                    <!--<p>-->
-                        <!--10:35途经5.12大地震震中城市汶川-->
-                    <!--</p>-->
-                    <!--<img src="/images/jzg/jzg_stops_wc.jpg" alt="jzg_stops_wc.jpg"/>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+    <div class="stop">
+        <div class="stop_title stop">
+            停靠点一：映秀镇
+        </div>
+        <div class="stop_desc">
+            <div class="node first">
+                <div class="line">
+                    <span class="circle"></span>
+                    <span class="pink_line"></span>
+                </div>
+                <div class="substance">
+                    <p>
+                        8：45-抵达映秀镇，小简给大家留出了一个小时的充足时间来参观地震遗址。但由于5-11月是九寨沟的旅游旺季，经常会出现堵车状况，所以为了节省大家时间，我们在5-11月期间会不做停留，请大家理解。
+                    </p>
+                    <img src="/images/jzg/jzg_stops_yxdzyz.jpg" alt="jzg_stops_yxdzyz.jpg"/>
+                </div>
+            </div>
+            <div class="node last">
+                <div class="line">
+                    <span class="circle"></span>
+                    <span class="pink_line"></span>
+                    <span class="circle last"></span>
+                </div>
+                <div class="substance">
+                    <p>
+                        10:35途经5.12大地震震中城市汶川
+                    </p>
+                    <img src="/images/jzg/jzg_stops_wc.jpg" alt="jzg_stops_wc.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="stop">
         <div class="stop_title stop">
             停靠点二：叠溪海子
@@ -144,9 +145,6 @@
                     style.id = "forhtml";
                     document.head.appendChild(style);
                     style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
-                    //
-                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-                    alert(20 * (clientWidth / 320)*0.65);
                 };
         recalc();
         if (!doc.addEventListener) return;
