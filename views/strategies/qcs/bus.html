@@ -48,17 +48,12 @@
                 <div class="left">
                     <div class="title">成都乘车点接驳服务</div>
                     <div class="detail">
-                        <span class="sc-price">
-                            <span class="label">市场价</span>
-                            <span>150</span>
-                        </span>
-                        <span class="jg-price">
-                            <span class="label">抢购价</span>
-                            <span>10</span>
-                        </span>
+                        <span class="label">抢购价</span>
+                        <span>10元</span>
                     </div>
                 </div>
-                <a href="http://m.simpletour.com/mobile/gateway/wechat/product/product/detail/187" class="right">立即抢购</a>
+                <a href="http://m.simpletour.com/mobile/gateway/wechat/product/product/detail/187"
+                   class="right">立即抢购</a>
             </div>
             <p class="li">
                 当然，成都市内也可以无障碍使用滴滴、uber，如果你能提前跟师傅约好就更棒了。
@@ -106,26 +101,26 @@
         win.addEventListener(resizeEvt, recalc, false);
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
-    var position = function(id,detail){
-        var service = new qq.maps.Geocoder(),map,marker;
-        service.setComplete(function(data){
-            var center = new qq.maps.LatLng(data.detail.location.lat,data.detail.location.lng);
-            map = new qq.maps.Map(document.getElementById(id),{
-                center : center,
-                zoom : 15
+    var position = function (id, detail) {
+        var service = new qq.maps.Geocoder(), map, marker;
+        service.setComplete(function (data) {
+            var center = new qq.maps.LatLng(data.detail.location.lat, data.detail.location.lng);
+            map = new qq.maps.Map(document.getElementById(id), {
+                center: center,
+                zoom: 15
             })
             marker = new qq.maps.Marker({
-                position:center,
-                map:map
+                position: center,
+                map: map
             })
         })
-        service.setError(function(data){
+        service.setError(function (data) {
             console.error(data + ',error');
         })
         service.getLocation(detail);
     }
 
-    position('map','宽窄巷子蜀风园酒店门口（长顺上街125号）')
+    position('map', '宽窄巷子蜀风园酒店门口（长顺上街125号）')
 </script>
 </body>
 </html>
