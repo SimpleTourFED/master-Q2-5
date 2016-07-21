@@ -769,14 +769,6 @@
 
                 }
             });
-            document.addEventListener('touchend',function(event){
-                var letter = "A";
-                if(isClickLocation && event.target.className == 'location'){
-                    letter = $(event.target).attr('data-letter').slice(0,1);
-                    document.getElementsByClassName('destination-content current')[0]
-                            .scrollTop = $('.destination-content.current .letter[data-position='+letter+']').offset().top - $('.search-bar').height() * 2;
-                }
-            });
             $('.bus-item').tap(function(e) {
                 e.preventDefault();
                 if(Math.abs(endObj.x)<2 && Math.abs(endObj.y)<2){
@@ -804,12 +796,43 @@
             // 初始化可滚动区域高度
             $('.destination-content').height($(window).height() - $('header').height() * 2);
 
+            // 记录不同块中letter的滚动位置,每次切换current,需要重新计算
+            var letterArray = [];
+            $('.turnTo').click(function() {
+                var $searchHeight = $('.search-bar').height();
+                $('.destination-content.current .letter').each(function(k,v) {
+                    letterArray.push({
+                        letter: $(v).attr('data-position'),
+                        offsetY: $(v).offset().top - 2 * $searchHeight
+                    })
+                });
+            });
+            document.addEventListener('touchend',function(event){
+                var letter = "A";
+                if(isClickLocation && event.target.className == 'location'){
+                    letter = $(event.target).attr('data-letter').slice(0,1);
+
+                    for(var i = 0, len = letterArray.length; i < len; i++) {
+                        if(letter == letterArray[i].letter) {
+                            document.getElementsByClassName('destination-content current')[0]
+                                    .scrollTop = letterArray[i].offsetY;
+                        }
+                    }
+                }
+            });
+
             $('.navBar li').click(function (e) {
                 $('.navBar li').removeClass('selected');
                 $(this).addClass('selected');
                 var destination = $(this).attr('data-destination');
                 $('.destination-content.current').removeClass('current');
                 $('#'+destination).addClass('current');
+                $('.destination-content.current .letter').each(function(k,v) {
+                    letterArray.push({
+                        letter: $(v).attr('data-position'),
+                        offsetY: $(v).offset().top - 2 * $searchHeight
+                    })
+                });
             });
             $('.search-bar .back').click(function(e) {
                 history.go(-1);
