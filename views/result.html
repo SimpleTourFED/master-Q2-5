@@ -261,6 +261,7 @@
                 <div class="search-input">
                     <label></label>
                     <input oninput="filterResult(event)" type="text" name="search" placeholder="搜索" />
+                    <div class="click-zone"></div>
                 </div>
                 <div class="cancel">
                     取消
@@ -774,11 +775,16 @@
             $('.search-input input').focusin(function (e) {
                 $('.search-bar').addClass('click-search');
                 $('.search-result').addClass('show');
-            })
+            });
             $('.search-bar .cancel').click(function (e) {
                 $('.search-bar').removeClass('click-search');
                 $('.search-result').removeClass('show');
-            })
+                $('.search-input input').val('');
+            });
+            // 这里用一个稍微大一点的div来触发清空按钮的点击事件
+            $('.click-zone').click(function() {
+                $('.search-input input').val('');
+            });
         });
     </script>
 </body>

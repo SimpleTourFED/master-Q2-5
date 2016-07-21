@@ -40,6 +40,23 @@ input:-moz-placeholder { color:#FF527A; }
       transition: width 0.15s ease-out;
       display: none;
     }
+    .search-input {
+      &:after{
+        content: '+';
+        color: #D71345;
+        margin-top: rem(7px);
+        margin-right: rem(10px);
+        font-size: rem(18px);
+        width: rem(14px);
+        height: rem(14px);
+        line-height: rem(11px);
+        text-align: center;
+        background-color: #FF527A;
+        border-radius: rem(14px);
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+      }
+    }
     .cancel {
       display: block;
     }
@@ -74,6 +91,15 @@ input:-moz-placeholder { color:#FF527A; }
       height: 100%;
       background-color: transparent;
       padding: .2rem .35rem .2rem rem(12px);
+    }
+    .click-zone {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: rem(34px);
+      height: 100%;
+      background-color: transparent;
+      z-index: 103;
     }
   }
 }
