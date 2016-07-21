@@ -5,6 +5,9 @@ body {
 ::-webkit-input-placeholder { color:#FF527A; }
 input:-moz-placeholder { color:#FF527A; }
 .search-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: rem(40px);
   line-height: rem(40px);
@@ -36,10 +39,13 @@ input:-moz-placeholder { color:#FF527A; }
     .back {
       background: none;
       width: 0;
-      -webkit-transition: width 0.15s ease-out;
-      transition: width 0.15s ease-out;
       display: none;
     }
+    .cancel {
+      display: block;
+    }
+  }
+  &.input-change {
     .search-input {
       &:after{
         content: '+';
@@ -56,9 +62,6 @@ input:-moz-placeholder { color:#FF527A; }
         transform:rotate(45deg);
         -webkit-transform:rotate(45deg);
       }
-    }
-    .cancel {
-      display: block;
     }
   }
   .search-input {
@@ -129,6 +132,9 @@ input:-moz-placeholder { color:#FF527A; }
   }
 }
 .navBar {
+  position: absolute;
+  top: 2rem;
+  left: 0;
   width: 100%;
   height: rem(40px);
   background-color: #fff;
@@ -144,7 +150,7 @@ input:-moz-placeholder { color:#FF527A; }
       line-height: rem(38px);
       text-align: center;
       font-size: .7rem;
-      color: #BDBDBD;
+      color: #737373;
       &.selected {
         color: #D71345;
         border-bottom: 2px solid #D71345;
@@ -177,6 +183,7 @@ input:-moz-placeholder { color:#FF527A; }
 }
 .destination-content {
   position: absolute;
+  top : 4rem;
   width: 100%;
   -webkit-transform: translate3d(100%,0,0);
   transform: translate3d(100%,0,0);
