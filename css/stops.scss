@@ -69,7 +69,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-size: 20px;
-  background: #F6F6F6;
+  background: #fff;
 }
 
 html {
@@ -175,6 +175,9 @@ footer {
           .substance {
             margin-left: 0;
             padding-bottom: 0;
+            img{
+              height: rem(144px);
+            }
           }
         }
         .line {
@@ -217,8 +220,8 @@ footer {
           padding-bottom: rem(10px);
           img {
             width: 100%;
-            height: rem(129px);
-            padding-top: rem(8px);
+            height: rem(136px);
+            margin-top: rem(8px);
           }
           .ticket {
             @include displayflex;
@@ -235,22 +238,22 @@ footer {
             height: rem(59px);
             .left {
               @include flex(1);
-              padding: rem(11px) rem(10px) rem(11px) rem(14px);
+              padding: rem(10px) rem(10px) rem(10px) rem(14px);
               .title {
                 color: #DC253B;
                 font-size: rem(15px);
                 padding-bottom: rem(8px);
                 word-break: keep-all;
                 max-width: rem(206px);
-                height: rem(23px);
-                line-height: rem(15px);
+                height: rem(25px);
+                line-height: rem(17px);
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
               }
               .detail {
-                height: rem(12px);
-                line-height: rem(12px);
+                height: rem(14px);
+                line-height: rem(14px);
                 .sc-price, .jg-price {
                   color: #535353;
                   span{
@@ -272,6 +275,7 @@ footer {
             .right {
               display: inline-block;
               width: rem(50px);
+              min-height: rem(57px);
               text-align: center;
               color: #fff;
               padding: rem(9px);

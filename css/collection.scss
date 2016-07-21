@@ -69,7 +69,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-size: 20px;
-  background: #F6F6F6;
+  background: #fff;
 }
 
 html {
@@ -239,22 +239,22 @@ footer {
         height: rem(59px);
         .left {
           @include flex(1);
-          padding: rem(11px) rem(10px) rem(11px) rem(14px);
+          padding: rem(10px) rem(10px) rem(10px) rem(14px);
           .title {
             color: #DC253B;
             font-size: rem(15px);
             padding-bottom: rem(8px);
             word-break: keep-all;
             max-width: rem(206px);
-            height: rem(23px);
-            line-height: rem(15px);
+            height: rem(25px);
+            line-height: rem(17px);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
           .detail {
-            height: rem(12px);
-            line-height: rem(12px);
+            height: rem(14px);
+            line-height: rem(14px);
             .sc-price, .jg-price {
               color: #535353;
               span{
@@ -276,6 +276,7 @@ footer {
         .right {
           display: inline-block;
           width: rem(50px);
+          min-height: rem(57px);
           text-align: center;
           color: #fff;
           padding: rem(9px);
@@ -308,11 +309,12 @@ footer {
           font-size: 0;
           padding: rem(17px) 0 rem(10px) 0;
           .text {
+            display: inline-block;
             width: rem(60px);
             height: rem(22px);
             background-color: #DC253B;
             text-align: center;
-            line-height: rem(22px);
+            line-height: rem(23px);
             font-size: rem(12px);
             color: #fff;
             background-color: #DC253B;
@@ -322,11 +324,10 @@ footer {
             -o-border-radius: rem(15px);
             border-radius: rem(15px);
             margin: 0 rem(10px);
-            display: inline-block;
             vertical-align: top;
           }
           .redline {
-            width: rem(100px);
+            min-width: rem(101px);
             height: 1px;
             margin-top: rem(11px);
             background-color: #DC253B;
