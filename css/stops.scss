@@ -160,9 +160,12 @@ footer {
         @include flexflowRow();
         &.first {
           .line {
-            .circle {
+            //.circle {
+            //  margin-top: rem(4px);
+            //  position: relative;
+            //}
+            .pink_line{
               margin-top: rem(4px);
-              position: relative;
             }
           }
         }
@@ -196,15 +199,17 @@ footer {
             background: url(/images/pink_circle.png) no-repeat center;
             background-size: cover;
             position: absolute;
+            top: rem(-1px);
             left: 0;
-            right: 0;
             &.last {
+              bottom: rem(-1px);
+              top: auto;
+              left: 0;
               margin-top: 0;
-              position: relative;
             }
           }
           .pink_line {
-            width: rem(5px);
+            width: rem(4.4px);
             margin: 0 auto;
             @include flex(1);
             background-color: #F9C9D6;
