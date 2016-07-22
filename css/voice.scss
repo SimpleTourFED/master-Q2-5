@@ -208,6 +208,9 @@ footer {
         &.last{
           padding: 0;
         }
+        &.pb30{
+          padding-bottom: rem(30px);
+        }
       }
     }
   }
