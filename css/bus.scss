@@ -89,6 +89,9 @@ html {
 
 .content {
   padding: rem(5px) rem(16px) 0 rem(16px);
+  .mb10{
+    margin-bottom: rem(10px);
+  }
   .ticket {
     @include displayflex;
     @include flexflowRow();
