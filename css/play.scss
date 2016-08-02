@@ -125,16 +125,16 @@ footer {
 
 .content {
   padding: rem(5px) rem(16px) 0 rem(16px);
-  .pt10{
+  .pt10 {
     padding-top: rem(10px);
   }
-  .pb10{
+  .pb10 {
     padding-bottom: rem(10px);
   }
-  .mt10{
+  .mt10 {
     margin-top: rem(10px);
   }
-  .mb10{
+  .mb10 {
     margin-bottom: rem(10px);
   }
   .play {
@@ -198,7 +198,7 @@ footer {
             text-align: right;
           }
         }
-        &.first{
+        &.first {
           padding-top: 0;
         }
       }
@@ -232,7 +232,7 @@ footer {
           .detail {
             height: rem(14px);
             line-height: rem(14px);
-            span{
+            span {
               color: #CB1A2E;
               font-size: rem(12px);
               height: rem(12px);
@@ -262,7 +262,7 @@ footer {
         &.no-mb {
           margin-bottom: 0;
         }
-        &.no-mt{
+        &.no-mt {
           margin-top: 0;
         }
       }
@@ -270,29 +270,29 @@ footer {
         width: rem(288px);
         height: auto;
       }
-      table{
+      table {
         width: 100%;
         font-size: rem(13px);
         color: #737373;
         border-top: 1px solid #CFCFCF;
         border-left: 1px solid #CFCFCF;
-        td{
+        td {
           font-size: rem(12px);
         }
-        td.one{
+        td.one {
           width: 24%;
         }
-        td.two{
+        td.two {
           width: 38%;
         }
-        td.three{
+        td.three {
           width: 38%;
         }
-        th{
+        th {
           background-color: #eee;
         }
-        td,th{
-         border-bottom: 1px solid #CFCFCF;
+        td, th {
+          border-bottom: 1px solid #CFCFCF;
           border-right: 1px solid #CFCFCF;
           height: rem(28px);
           line-height: rem(28px);
@@ -300,39 +300,59 @@ footer {
           padding: rem(3px);
         }
       }
-      p{
+      p {
         font-size: rem(13px);
         color: #737373;
         line-height: rem(20px);
         padding-bottom: rem(12px);
       }
-      p.last{
+      p.last {
         padding: 0;
       }
-      .text_content{
+      .text_content {
         padding-top: rem(10px);
       }
-      .text_desc{
+      .text_desc {
         font-size: rem(13px);
         color: #737373;
         line-height: rem(20px);
         padding-bottom: rem(10px);
-        &.no-pb{
-         padding-bottom: 0;
+        &.no-pb {
+          padding-bottom: 0;
         }
       }
-      .img_desc{
-        img{
+      .img_desc {
+        img {
           width: 100%;
           height: rem(144px);
         }
       }
     }
   }
-  .recommend{
+  .tourism {
+    p {
+      font-size: rem(13px);
+      color: #737373;
+      line-height: rem(20px);
+      padding-bottom: rem(12px);
+    }
+    p.last {
+      padding: 0;
+    }
+    h3 {
+      font-size: rem(13px);
+      color: #737373;
+      line-height: rem(20px);
+      padding-bottom: rem(12px);
+    }
+    &.last{
+      padding-bottom: rem(18px);
+    }
+  }
+  .recommend {
     color: #F44D79;
     font-size: rem(15px);
-    .re_title{
+    .re_title {
       padding-bottom: rem(15px);
     }
   }
