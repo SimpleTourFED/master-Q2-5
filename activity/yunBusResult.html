@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>简途旅行</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/images/logo.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/yunBus.scss??__inline"/>
+</head>
+<body style="visibility: hidden">
+<div class="page-group" >
+    <div class="page page-current" style="background-color: #F6F6F6;" id="main">
+        <!--每个page的页头-->
+        <header>
+            <div class="back">后退</div>
+            <div class="center">领取成功</div>
+            <div class="home">个人中心</div>
+        </header>
+        <div class="page-content">
+            <div class="head-wrapper">
+                <div class="img-wp">
+                    <img src="/images/success_icon@2x.png" alt="">
+                </div>
+                <div class="title">
+                    领取成功!
+                </div>
+                <div class="price-info">
+                    现金抵用券50元已存入您的手机账户
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <button class="rightNow">现在去用券</button>
+            </div>
+            <div class="rules">
+                <h5>简途·云巴士现金抵用券使用规则：</h5>
+                <p>1.使用现金券需和领取现金券的手机号码一致</p>
+                <p>2.现金券仅限简途微信自营渠道云巴士产品使用</p>
+                <p>3.现金券总额50元，包含玉龙雪山类产品10元现金券一张、大理及双廊类产品20现金券一张、香格里拉类产品20现金券一张</p>
+                <p>4.同一订单只能使用一张现金券</p>
+                <p>使用时间：2016.9.30-2016.12.31</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/common/js/zepto.min.js"></script>
+<script type="text/javascript" src="/common/js/base.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        document.body.style.visibility = 'visible';
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    $(document).ready(function() {
+        $('header .back').click(function () {
+            if (!$(this).hasClass('no-icon')) {
+                history.go(-1);
+            }
+        });
+        $('header .home').sidebar();// 后台传入用户电话号码
+        $('.rightNow').click(function() {
+            location.href= '';
+        });
+    })
+</script>
+</body>
+</html>

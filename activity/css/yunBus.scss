@@ -1,0 +1,106 @@
+@import "/common/css/base";
+.img-wp {
+  width: 100%;
+  height: rem(160px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.input-wrapper {
+  padding: rem(12px) rem(16px);
+  input {
+    width: rem(296px);
+    height: rem(40px);
+    text-align: center;
+    border: rem(1px) solid #D70440;
+    border-radius: rem(4px);
+    font-size: rem(14px);
+  }
+  button {
+    margin-top: rem(10px);
+    width: rem(296px);
+    height: rem(40px);
+    line-height: rem(40px);
+    text-align: center;
+    border-radius: rem(4px);
+    color: #ffffff;
+    border: rem(1px) solid #D70440;
+    background-color: #D70440;
+    font-size: rem(14px);
+    &.disabled {
+      background-color: #bdbdbd;
+      border: rem(1px) solid #bdbdbd;
+    }
+  }
+  .agree {
+    margin-top: rem(10px);
+    position: relative;
+    color: #666666;
+    font-size: rem(12px);
+    text-align: center;
+    span {
+      color: #5BD4D7;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 1.2rem;
+      width: rem(14px);
+      height: rem(14px);
+      background: url(/images/checkboxF.png) no-repeat center;
+      background-size: contain;
+    }
+    &.selected {
+      &:before {
+        background: url(/images/checkboxT.png) no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}
+.rules {
+  padding: rem(20px) rem(16px);
+  color: #666666;
+  font-size: rem(14px);
+  h5{
+    font-size: rem(14px);
+    color: #666666;
+    padding: rem(12px) 0;
+    border-bottom: rem(1px) solid #E4E4E4;
+  }
+  p {
+    margin-top: rem(10px);
+    &:last-child {
+      margin-top: rem(26px);
+    }
+  }
+}
+.head-wrapper {
+  width: 100%;
+  background-color: #fff;
+  padding: rem(14px) 0;
+  .img-wp {
+    width: rem(112px);
+    height: rem(84px);
+    margin: 0 auto;
+    img{
+      width: 100%;
+      height:100%;
+    }
+  }
+  .title {
+    margin-top: rem(24px);
+    font-size: rem(18px);
+    color: #D70440;
+    text-align: center;
+  }
+  .price-info {
+    text-align: center;
+    margin-top: rem(10px);
+    font-size: rem(14px);
+    color: #6D6D6D;
+  }
+}
