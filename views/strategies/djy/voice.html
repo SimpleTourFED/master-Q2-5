@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>目的地语音导览</title>
+    <link href="/css/voice.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/voice_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="voice">
+        <!--zan|spot-->
+        <div class="voice_title spot">
+            都江堰简介：
+        </div>
+        <div class="voice_desc">
+            <div class="node last">
+                <div class="node_content">
+                    <p>
+                        都江堰位于四川省成都市都江堰市城西，坐落在成都平原西部的岷江上，始建于秦昭王末年(约公元前256～前251)[1]  ，是蜀郡太守李冰父子在前人鳖灵开凿的基础上组织修建的大型水利工程，由分水鱼嘴、飞沙堰、宝瓶口等部分组成，两千多年来一直发挥着防洪灌溉的作用，使成都平原成为水旱从人、沃野千里的"天府之国"，至今灌区已达30余县市、面积近千万亩，是全世界迄今为止，年代最久、唯一留存、仍在一直使用，以无坝引水为特征的宏大水利工程，凝聚着中国古代汉族劳动人民勤劳、勇敢、智慧的结晶。
+                    </p>
+                    <img src="/images/djy/" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voice no-pd">
+        <!--zan|spot-->
+        <div class="voice_title zan">
+            都江堰必游景点
+        </div>
+        <div class="voice_desc">
+            <div class="node">
+                <div class="node_title">
+                    伏龙观
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：先看到伏龙观，伏龙观位于离堆公园内。其下临深潭，传说因李冰父子治水时曾在这里降伏孽龙在离堆之下，故于北宋初年改祭李冰，取名“伏龙观”。
+                    </p>
+                    <img src="/images/djy/djy_play_flg.jpg" alt="djy_play_flg.jpg"/>
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node">
+                <div class="node_title">
+                    安澜索桥
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：安澜索桥又名“安澜桥”、“夫妻桥”。位于都江堰鱼嘴之上，横安澜桥跨内外两江，被誉为“中国古代五大桥梁”，是都江堰最具特征的景观。始建于宋代以前，明末（公元17世纪）毁于战火。
+                    </p>
+                    <img src="/images/djy/djy_play_alsq.jpg" alt="djy_play_alsq.jpg"/>
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node last">
+                <div class="node_title">
+                    二王庙
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：二王庙位于岷江右岸的山坡上，前临都江堰，原为纪念蜀王的望帝祠，齐建武（公元494～498）时改祀李冰父子，更名为“崇德祠”。宋代（公元960～1279年）以后，李冰父子相继被皇帝敕封为王，故而后人称之为“二王庙”。
+                    </p>
+                    <img src="/images/djy/djy_play_ewm.jpg" alt="djy_play_ewm.jpg"/>
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+        <a href="#">更多</a>
+    </div>
+</div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/views/strategies/jzg/home.html">去查看全部都江堰攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

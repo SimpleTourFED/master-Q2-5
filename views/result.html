@@ -4,10 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="wap-font-scale" content="no">
     <title>简途旅行</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="/images/logo.ico" rel="icon" type="image/x-icon"/>
     <link rel="stylesheet" href="../css/queryResult.scss?__inline" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/newArrive.scss?__inline" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript">
+        function filterResult (e){
+            var value = event.target.value;
+            if(!value) {
+                $('.search-bar').removeClass('input-change');
+            } else {
+                $('.search-bar').addClass('input-change');
+            }
+            $('.search-result .result').each(function(key, item) {
+                if($(item).text().indexOf(value) >= 0) {
+                    $(item).show();
+                } else {
+                    $(item).hide();
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="page-group" style="visibility: hidden">
@@ -242,192 +261,546 @@
             </div>
         </div>
         <div class="page" id="tab-depart">
-            <!--每个page的页头-->
-            <header>
-                <div class="back">后退</div>
-                <div class="center">选择出发地</div>
-                <div class="home">个人中心</div>
-            </header>
-            <div class="page-content">
-                <div class="detination-wrapper">
-                    <div class="destination-gp">
-                        <div class="destination-title">
-                            重庆
+            <div class="search-bar">
+                <div class="back"></div>
+                <div class="search-input">
+                    <label></label>
+                    <input oninput="filterResult(event)" type="text" name="search" placeholder="搜索" />
+                    <div class="click-zone"></div>
+                </div>
+                <div class="cancel">
+                    取消
+                </div>
+            </div>
+            <div class="search-result">
+                <div class="result">杨sir</div>
+                <div class="result">重庆</div>
+                <div class="result">阿坝</div>
+                <div class="result">九寨沟</div>
+                <div class="result">西林雪山</div>
+                <div class="result">碰壁狗</div>
+                <div class="result">芭提雅</div>
+                <div class="result">杭州</div>
+                <div class="result">何十三波</div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li class="selected" data-destination="sichuan">四川</li>
+                    <li class="chongqing" data-destination="chongqing">重庆</li>
+                    <li class="yunnan" data-destination="yunnan">云南</li>
+                    <li class="taiguo" data-destination="taiguo">泰国</li>
+                </ul>
+            </div>
+            <div class="right-navBar">
+                <ul>
+                    <li class="location" data-letter="A">A</li>
+                    <li class="location" data-letter="BC">·</li>
+                    <li class="location" data-letter="D">D</li>
+                    <li class="location" data-letter="EF">·</li>
+                    <li class="location" data-letter="G">G</li>
+                    <li class="location" data-letter="HI">·</li>
+                    <li class="location" data-letter="J">J</li>
+                    <li class="location" data-letter="KL">·</li>
+                    <li class="location" data-letter="M">M</li>
+                    <li class="location" data-letter="NO">·</li>
+                    <li class="location" data-letter="P">P</li>
+                    <li class="location" data-letter="QR">·</li>
+                    <li class="location" data-letter="S">S</li>
+                    <li class="location" data-letter="TU">·</li>
+                    <li class="location" data-letter="V">V</li>
+                    <li class="location" data-letter="WXY">·</li>
+                    <li class="location" data-letter="Z">Z</li>
+                </ul>
+            </div>
+            <div class="destination-content sichuan current" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li>九寨沟</li>
+                        <li>青城山</li>
+                        <li>熊猫基地</li>
+                        <li>汶川</li>
+                        <li>西岭雪山上面</li>
+                        <li>九寨沟</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
                         </div>
-                        <div class="destinations">
-                            <div class="items">
-                                <div class="item hot  active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-
-                                <div class="item  active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot " data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大时</div>
-                                </div>
-                            </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
                         </div>
                     </div>
-                    <div class="destination-gp">
-                        <div class="destination-title">
-                            重庆
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
                         </div>
-                        <div class="destinations">
-                            <div class="items">
-                                <div class="item hot  active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大安师大</div>
-                                </div>
-
-                                <div class="item  active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大安师大安师大安师大安师大</div>
-                                </div>
-                                <div class="item hot last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大安师大安师大安师大安师大</div>
-                                </div>
-                                <div class="item active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot " data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大安师大安师大安师大安师大</div>
-                                </div>
-                                <div class="item hot" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大安师大安师大安师大安师大</div>
-                                </div>
-                                <div class="item" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大安师大安师大安师大安师大</div>
-                                </div>
-                            </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="F">
+                            F
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="K">
+                            K
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                            <div class="item">ASD</div>
+                            <div class="item">飞锅</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content chongqing" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">重庆</li>
+                        <li>重庆</li>
+                        <li>重庆</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content yunnan" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">云南</li>
+                        <li>云南</li>
+                        <li>云南</li>
+                        <li>云南</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content taiguo" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page" id="tab-arrive">
-            <!--每个page的页头-->
-            <header>
-                <div class="back">后退</div>
-                <div class="center">选择目的地</div>
-                <div class="home">个人中心</div>
-            </header>
-            <div class="page-content">
-                <div class="detination-wrapper">
-                    <div class="destination-gp">
-                        <div class="destination-title">
-                            重庆
+            <div class="search-bar">
+                <div class="back"></div>
+                <div class="search-input">
+                    <label></label>
+                    <input oninput="filterResult(event)" type="text" name="search" placeholder="搜索" />
+                    <div class="click-zone"></div>
+                </div>
+                <div class="cancel">
+                    取消
+                </div>
+            </div>
+            <div class="search-result">
+                <div class="result">杨sir</div>
+                <div class="result">重庆</div>
+                <div class="result">阿坝</div>
+                <div class="result">九寨沟</div>
+                <div class="result">西林雪山</div>
+                <div class="result">碰壁狗</div>
+                <div class="result">芭提雅</div>
+                <div class="result">杭州</div>
+                <div class="result">何十三波</div>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li class="selected" data-destination="sichuan">四川</li>
+                    <li class="chongqing" data-destination="chongqing">重庆</li>
+                    <li class="yunnan" data-destination="yunnan">云南</li>
+                    <li class="taiguo" data-destination="taiguo">泰国</li>
+                </ul>
+            </div>
+            <div class="right-navBar">
+                <ul>
+                    <li class="location" data-letter="A">A</li>
+                    <li class="location" data-letter="BC">·</li>
+                    <li class="location" data-letter="D">D</li>
+                    <li class="location" data-letter="EF">·</li>
+                    <li class="location" data-letter="G">G</li>
+                    <li class="location" data-letter="HI">·</li>
+                    <li class="location" data-letter="J">J</li>
+                    <li class="location" data-letter="KL">·</li>
+                    <li class="location" data-letter="M">M</li>
+                    <li class="location" data-letter="NO">·</li>
+                    <li class="location" data-letter="P">P</li>
+                    <li class="location" data-letter="QR">·</li>
+                    <li class="location" data-letter="S">S</li>
+                    <li class="location" data-letter="TU">·</li>
+                    <li class="location" data-letter="V">V</li>
+                    <li class="location" data-letter="WXY">·</li>
+                    <li class="location" data-letter="Z">Z</li>
+                </ul>
+            </div>
+            <div class="destination-content sichuan current">
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li>九寨沟</li>
+                        <li>青城山</li>
+                        <li>熊猫基地</li>
+                        <li>汶川</li>
+                        <li>西岭雪山上面</li>
+                        <li>九寨沟</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
                         </div>
-                        <div class="destinations">
-                            <div class="items">
-                                <div class="item hot last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-
-                                <div class="item last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大时</div>
-                                </div>
-                            </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
                         </div>
                     </div>
-                    <div class="destination-gp">
-                        <div class="destination-title">
-                            重庆
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
                         </div>
-                        <div class="destinations">
-                            <div class="items">
-                                <div class="item hot last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-
-                                <div class="item last active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item active" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item last" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item hot" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="isHot"></div>
-                                    <div class="hot-font">热</div>
-                                    <div class="place-name">安师大</div>
-                                </div>
-                                <div class="item" data-id="${homeLocationElementMapView.value.id}">
-                                    <div class="place-name">安师按时</div>
-                                </div>
-                            </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="F">
+                            F
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="K">
+                            K
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                            <div class="item">ASD</div>
+                            <div class="item">飞锅</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content chongqing" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">重庆</li>
+                        <li>重庆</li>
+                        <li>重庆</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content yunnan">
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">云南</li>
+                        <li>云南</li>
+                        <li>云南</li>
+                        <li>云南</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-content taiguo" >
+                <div class="hot-place">
+                    <h5>热门</h5>
+                    <ul>
+                        <li class="selected">泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                        <li>泰国</li>
+                    </ul>
+                </div>
+                <div class="destinations">
+                    <div class="destination">
+                        <div class="letter" data-position="A">
+                            A
+                        </div>
+                        <div class="content">
+                            <div class="item">阿坝</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="B">
+                            B
+                        </div>
+                        <div class="content">
+                            <div class="item">北方</div>
+                            <div class="item">白鹭洲</div>
+                            <div class="item">北戴河</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="C">
+                            C
+                        </div>
+                        <div class="content">
+                            <div class="item">成都</div>
+                            <div class="item">城乡结合部</div>
+                        </div>
+                    </div>
+                    <div class="destination">
+                        <div class="letter" data-position="D">
+                            D
+                        </div>
+                        <div class="content">
+                            <div class="item">地球</div>
+                            <div class="item">地反政府</div>
                         </div>
                     </div>
                 </div>
@@ -649,16 +1022,26 @@
              ============================================== */
             var startObj = {x:0,y:0};
             var endObj = {x:0,y:0};
+
+            // isClickLocation这个参数决定如果并未点击到rightbar则不执行在touchmove中的语句,避免性能浪费
+            var isClickLocation = false;
             document.addEventListener('touchstart',function(event){
                 startObj.x = event.touches[0].pageX;
                 startObj.y = event.touches[0].pageY;
                 endObj.x = 0;
                 endObj.y = 0;
-            })
+                // 右侧的navBar
+                if(event.target.className == 'location') {
+                    isClickLocation = true;
+                }
+            });
             document.addEventListener('touchmove',function(event){
                 endObj.x = event.touches[0].pageX - startObj.x;
                 endObj.y = event.touches[0].pageY - startObj.y;
-            })
+                if(isClickLocation && event.target.className == 'location'){
+
+                }
+            });
             $('.bus-item').tap(function(e) {
                 e.preventDefault();
                 if(Math.abs(endObj.x)<2 && Math.abs(endObj.y)<2){
@@ -677,6 +1060,73 @@
                 if($(this).attr('data-href')) {
                     location.href =  $(this).attr('data-href');
                 }
+            });
+
+
+            /* ============================================
+             ************  新加的目的地列表页面的js   *********
+             ============================================== */
+            // 初始化可滚动区域高度
+            $('.destination-content').height($(window).height() - $('header').height() * 2);
+
+            // 记录不同块中letter的滚动位置,每次切换current,需要重新计算
+            var letterArray = [];
+            var $searchHeight;
+            $('.turnTo').click(function() {
+                $searchHeight = $('.search-bar').height();
+                $('.page-current .destination-content.current .letter').each(function(k,v) {
+                    letterArray.push({
+                        letter: $(v).attr('data-position'),
+                        offsetY: $(v).offset().top - 2 * $searchHeight
+                    })
+                });
+            });
+            document.addEventListener('touchend',function(event){
+                var letter = "A";
+                if(isClickLocation && event.target.className == 'location'){
+                    letter = $(event.target).attr('data-letter').slice(0,1);
+
+                    for(var i = 0, len = letterArray.length; i < len; i++) {
+                        if(letter == letterArray[i].letter) {
+                            document.getElementsByClassName('destination-content current')[0]
+                                    .scrollTop = letterArray[i].offsetY;
+                        }
+                    }
+                }
+            });
+
+            $('.navBar li').click(function (e) {
+                $(this).parents('.page').find('.navBar li').removeClass('selected');
+                $(this).addClass('selected');
+                var destination = $(this).attr('data-destination');
+                $(this).parents('.page').find('.destination-content.current').removeClass('current');
+                $(this).parents('.page').find('.'+destination).addClass('current');
+                $(this).parents('.page').find('.destination-content.current .letter').each(function(k,v) {
+                    letterArray.push({
+                        letter: $(v).attr('data-position'),
+                        offsetY: $(v).offset().top - 2 * $searchHeight
+                    })
+                });
+            });
+            $('.search-bar .back').click(function(e) {
+                history.go(-1);
+            });
+            $('.hot-place li').click(function(e) {
+                $('.hot-place li').removeClass('selected');
+                $(this).addClass('selected');
+            });
+            $('.search-input input').focusin(function (e) {
+                $('.search-bar').addClass('click-search');
+                $('.search-result').addClass('show');
+            });
+            $('.search-bar .cancel').click(function (e) {
+                $('.search-bar').removeClass('click-search').removeClass('input-change');
+                $('.search-result').removeClass('show');
+                $('.search-input input').val('');
+            });
+            // 这里用一个稍微大一点的div来触发清空按钮的点击事件
+            $('.click-zone').click(function() {
+                $('.search-input input').val('');
             });
         });
     </script>

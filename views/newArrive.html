@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <title>简途旅行</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/images/logo.ico" rel="icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/newArrive.scss?__inline" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript">
+        function filterResult (e){
+            var value = event.target.value;
+            $('.search-result .result').each(function(key, item) {
+                if($(item).text().indexOf(value) >= 0) {
+                    $(item).show();
+                } else {
+                    $(item).hide();
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="page-group" style="visibility: hidden">
+    <div class="search-bar">
+        <div class="back"></div>
+        <div class="search-input">
+            <label></label>
+            <input oninput="filterResult(event)" type="text" name="search" placeholder="搜索" />
+        </div>
+    </div>
+    <div class="search-result">
+        <div class="result">杨sir</div>
+        <div class="result">重庆</div>
+        <div class="result">阿坝</div>
+        <div class="result">九寨沟</div>
+        <div class="result">西林雪山</div>
+        <div class="result">碰壁狗</div>
+        <div class="result">芭提雅</div>
+        <div class="result">杭州</div>
+        <div class="result">何十三波</div>
+    </div>
+    <div class="navBar">
+        <ul>
+            <li class="selected turnTo" href="#sichuan">四川</li>
+            <li class="turnTo" href="#chongqing">重庆</li>
+            <li class="turnTo" href="#yunnan">云南</li>
+            <li class="turnTo" href="#taiguo">泰国</li>
+        </ul>
+    </div>
+    <div class="right-navBar">
+        <ul>
+            <li>A</li>
+            <li>·</li>
+            <li>D</li>
+            <li>·</li>
+            <li>G</li>
+            <li>·</li>
+            <li>J</li>
+            <li>·</li>
+            <li>M</li>
+            <li>·</li>
+            <li>P</li>
+            <li>·</li>
+            <li>S</li>
+            <li>·</li>
+            <li>V</li>
+            <li>·</li>
+            <li>Z</li>
+        </ul>
+    </div>
+    <div class="page page-current" id="sichuan">
+        <div class="page-content">
+            <div class="hot-place">
+                <h5>热门</h5>
+                <ul>
+                    <li class="selected">九寨沟</li>
+                    <li>青城山</li>
+                    <li>熊猫基地</li>
+                    <li>汶川</li>
+                    <li>西岭雪山上面</li>
+                    <li>九寨沟</li>
+                </ul>
+            </div>
+            <div class="destinations">
+                <div class="destination">
+                    <div class="letter">
+                        A
+                    </div>
+                    <div class="content">
+                        <div class="item">阿坝</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        B
+                    </div>
+                    <div class="content">
+                        <div class="item">北方</div>
+                        <div class="item">白鹭洲</div>
+                        <div class="item">北戴河</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        C
+                    </div>
+                    <div class="content">
+                        <div class="item">成都</div>
+                        <div class="item">城乡结合部</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        D
+                    </div>
+                    <div class="content">
+                        <div class="item">地球</div>
+                        <div class="item">地反政府</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page " id="chongqing">
+        <div class="page-content">
+            <div class="hot-place">
+                <h5>热门</h5>
+                <ul>
+                    <li class="selected">重庆</li>
+                    <li>重庆</li>
+                    <li>重庆</li>
+                </ul>
+            </div>
+            <div class="destinations">
+                <div class="destination">
+                    <div class="letter">
+                        A
+                    </div>
+                    <div class="content">
+                        <div class="item">阿坝</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        B
+                    </div>
+                    <div class="content">
+                        <div class="item">北方</div>
+                        <div class="item">白鹭洲</div>
+                        <div class="item">北戴河</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        C
+                    </div>
+                    <div class="content">
+                        <div class="item">成都</div>
+                        <div class="item">城乡结合部</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        D
+                    </div>
+                    <div class="content">
+                        <div class="item">地球</div>
+                        <div class="item">地反政府</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page " id="yunnan">
+        <div class="page-content">
+            <div class="hot-place">
+                <h5>热门</h5>
+                <ul>
+                    <li class="selected">云南</li>
+                    <li>云南</li>
+                    <li>云南</li>
+                    <li>云南</li>
+                </ul>
+            </div>
+            <div class="destinations">
+                <div class="destination">
+                    <div class="letter">
+                        A
+                    </div>
+                    <div class="content">
+                        <div class="item">阿坝</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        B
+                    </div>
+                    <div class="content">
+                        <div class="item">北方</div>
+                        <div class="item">白鹭洲</div>
+                        <div class="item">北戴河</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        C
+                    </div>
+                    <div class="content">
+                        <div class="item">成都</div>
+                        <div class="item">城乡结合部</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        D
+                    </div>
+                    <div class="content">
+                        <div class="item">地球</div>
+                        <div class="item">地反政府</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page " id="taiguo">
+        <div class="page-content">
+            <div class="hot-place">
+                <h5>热门</h5>
+                <ul>
+                    <li class="selected">泰国</li>
+                    <li>泰国</li>
+                    <li>泰国</li>
+                    <li>泰国</li>
+                    <li>泰国</li>
+                    <li>泰国</li>
+                    <li>泰国</li>
+                </ul>
+            </div>
+            <div class="destinations">
+                <div class="destination">
+                    <div class="letter">
+                        A
+                    </div>
+                    <div class="content">
+                        <div class="item">阿坝</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        B
+                    </div>
+                    <div class="content">
+                        <div class="item">北方</div>
+                        <div class="item">白鹭洲</div>
+                        <div class="item">北戴河</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        C
+                    </div>
+                    <div class="content">
+                        <div class="item">成都</div>
+                        <div class="item">城乡结合部</div>
+                    </div>
+                </div>
+                <div class="destination">
+                    <div class="letter">
+                        D
+                    </div>
+                    <div class="content">
+                        <div class="item">地球</div>
+                        <div class="item">地反政府</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/common/js/zepto.min.js"></script>
+<script type="text/javascript" src="/common/js/sidebar.js"></script>
+<script type="text/javascript" src="/common/js/alert.js" async="async"></script>
+<script type="text/javascript" src="/common/js/pages.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        doc.getElementsByClassName('page-group')[0].style.visibility = 'visible';
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    $(document).ready(function() {
+        // 监听input框的变化值,触发filter 事件
+        $('.page-group').pageInit({
+            router : '.turnTo' ,//router的className
+            routerFun : function(){}
+        });
+        $('.search-input input').focusin(function (e) {
+            $('.search-result').addClass('show');
+        })
+        $('.page').height($(window).height() - $('.search-bar').height() * 2);
+        $('.turnTo').click(function (e) {
+            $('.turnTo').removeClass('selected');
+            $(this).addClass('selected');
+        });
+        $('.right-navBar').css("top",($(window).height() - $('.search-bar').height() * 2 - $('.right-navBar').height())/2 + $('.search-bar').height() * 2);
+
+    })
+</script>
+</body>
+</html>
