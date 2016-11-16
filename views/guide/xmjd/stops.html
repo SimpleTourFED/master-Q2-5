@@ -11,49 +11,53 @@
     <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
 </head>
 <body>
-<div class="top_banner">
-    <img src="/images/stop_top_banner.png" alt="banner"/>
-</div>
-<div class="content">
-    <div class="stop">
-        <div class="stop_title stop">
-            停靠点
-        </div>
-        <div class="stop_desc">
-            <div class="node first last">
-                <div class="line">
-                    <span class="circle"></span>
+<div class="main">
+    <div class="top_banner">
+        <img src="/images/stop_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="stop">
+            <div class="stop_title stop">
+                停靠点
+            </div>
+            <div class="stop_desc">
+                <div class="node first last">
+                    <div class="line">
+                        <span class="circle"></span>
+                    </div>
+                    <div class="substance">
+                        <p>
+                            因路途较近，一小时左右路程（视堵车情况），中途没有停靠点哟~
+                        </p>
+                    </div>
                 </div>
-                <div class="substance">
-                    <p>
-                        因路途较近，一小时左右路程（视堵车情况），中途没有停靠点哟~
-                    </p>
+            </div>
+        </div>
+        <div class="stop">
+            <div class="stop_title parking">
+                目的地停车
+            </div>
+            <div class="stop_desc">
+                <div class="node noLine">
+                    <div class="substance">
+                        <p>
+                            熊猫基地停车场：大熊猫生态园停车场
+                        </p>
+                        <div id="map" style="width:100%;height:200px"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="stop">
-        <div class="stop_title parking">
-            目的地停车
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="/images/bottom_banner@3x.png" alt="banner"/>
         </div>
-        <div class="stop_desc">
-            <div class="node noLine">
-                <div class="substance">
-                    <p>
-                        熊猫基地停车场：大熊猫生态园停车场
-                    </p>
-                    <div id="map" style="width:100%;height:200px"></div>
-                </div>
-            </div>
-        </div>
+        <footer>
+            <a href="/views/guide/xmjd/home.html">去查看全部熊猫基地攻略</a>
+        </footer>
     </div>
 </div>
-<div class="bottom_banner">
-    <img src="/images/bottom_banner@3x.png" alt="banner"/>
-</div>
-<footer>
-    <a href="/views/guide/xmjd/home.html">去查看全部熊猫基地攻略</a>
-</footer>
 <script type="text/javascript">
     (function (doc, win) {
         var docEl = doc.documentElement,

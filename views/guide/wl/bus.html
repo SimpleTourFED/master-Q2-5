@@ -11,62 +11,66 @@
     <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
 </head>
 <body>
-<div class="top_banner">
-    <img src="/images/bus_top_banner.png" alt="banner"/>
-</div>
-<div class="content">
-    <div class="item">
-        <div class="item_title bus">
-            <span class="bus"></span>
-            简途巴士是这样的
+<div class="main">
+    <div class="top_banner">
+        <img src="/images/bus_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="item">
+            <div class="item_title bus">
+                <span class="bus"></span>
+                简途巴士是这样的
+            </div>
+            <div class="item_content">
+                <img src="/images/wl/wl_bus_bbBus.png" alt="巴士图片"/>
+                <!--<img class="mb10" src="/images/jzg/jzg_bus1.jpg" alt="巴士图片"/>-->
+                <!--<img src="/images/jzg/jzg_bus2.jpg" alt="巴士图片"/>-->
+            </div>
         </div>
-        <div class="item_content">
-            <img src="/images/wl/wl_bus_bbBus.png" alt="巴士图片"/>
-            <!--<img class="mb10" src="/images/jzg/jzg_bus1.jpg" alt="巴士图片"/>-->
-            <!--<img src="/images/jzg/jzg_bus2.jpg" alt="巴士图片"/>-->
+        <div class="item">
+            <div class="item_title bus">
+                <span class="location"></span>
+                巴士上车点
+            </div>
+            <div class="item_content">
+                <p class="desc">1、龙头寺旅游集散中心（大厅内）。具体地点在下面:</p>
+                <div id="map0" style="width:100%;height:200px;margin-bottom:15px;"></div>
+            </div>
+            <div class="item_content">
+                <p class="desc">2、南坪会展中心（三根旗杆处）。具体地点在下面:</p>
+                <div id="map1" style="width:100%;height:200px"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="stop"></span>
+                上车点抵达方式
+            </div>
+            <div class="item_content">
+                <p class="li">
+                    1.打车：<br/>
+                    重庆市内可以无障碍使用出租、滴滴、uber，如果你能提前跟师傅约好就更棒了。
+                </p>
+                <p class="li last">
+                    2.公交/地铁：<br/>
+                    就近地铁站：地铁3号线重庆北站南广场<br/>
+                    公交站<br/>
+                    重庆北站南广场（50米） ：105路、439路、532路、616路、820路、841路、879路、885路<br/>
+                    泰山大道东段（180米）：119路<br/>
+                    重庆北站 （120米）：869路<br/>
+                </p>
+            </div>
         </div>
     </div>
-    <div class="item">
-        <div class="item_title bus">
-            <span class="location"></span>
-            巴士上车点
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="/images/bottom_banner@3x.png" alt="banner"/>
         </div>
-        <div class="item_content">
-            <p class="desc">1、龙头寺旅游集散中心（大厅内）。具体地点在下面:</p>
-            <div id="map0" style="width:100%;height:200px;margin-bottom:15px;"></div>
-        </div>
-        <div class="item_content">
-            <p class="desc">2、南坪会展中心（三根旗杆处）。具体地点在下面:</p>
-            <div id="map1" style="width:100%;height:200px"></div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="item_title bus">
-            <span class="stop"></span>
-            上车点抵达方式
-        </div>
-        <div class="item_content">
-            <p class="li">
-                1.打车：<br/>
-                重庆市内可以无障碍使用出租、滴滴、uber，如果你能提前跟师傅约好就更棒了。
-            </p>
-            <p class="li last">
-                2.公交/地铁：<br/>
-                就近地铁站：地铁3号线重庆北站南广场<br/>
-                公交站<br/>
-                重庆北站南广场（50米） ：105路、439路、532路、616路、820路、841路、879路、885路<br/>
-                泰山大道东段（180米）：119路<br/>
-                重庆北站 （120米）：869路<br/>
-            </p>
-        </div>
+        <footer>
+            <a href="/views/guide/wl/home.html">去查看全部武隆攻略</a>
+        </footer>
     </div>
 </div>
-<div class="bottom_banner">
-    <img src="/images/bottom_banner@3x.png" alt="banner"/>
-</div>
-<footer>
-    <a href="/views/guide/wl/home.html">去查看全部武隆攻略</a>
-</footer>
 <script type="text/javascript">
     (function (doc, win) {
         var docEl = doc.documentElement,

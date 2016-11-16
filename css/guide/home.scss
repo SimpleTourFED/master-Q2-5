@@ -163,6 +163,9 @@ html {
         background-size: cover;
       }
     }
+    li:last-child a{
+      border-bottom: none;
+    }
   }
 }
 

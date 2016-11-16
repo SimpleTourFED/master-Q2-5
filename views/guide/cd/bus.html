@@ -7,79 +7,84 @@
     <meta name="format-detection" content="telephone=no;email=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>巴士上车点</title>
-    <link href="/css/guide/bus.scss?__inline" rel="stylesheet" type="text/css" media="screen" title="no_title" charset="utf-8"/>
+    <link href="/css/guide/bus.scss?__inline" rel="stylesheet" type="text/css" media="screen" title="no_title"
+          charset="utf-8"/>
     <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
 </head>
 <body>
-<div class="top_banner">
-    <img src="/images/bus_top_banner.png" alt="banner"/>
-</div>
-<div class="content">
-    <div class="item">
-        <div class="item_title bus">
-            <span class="bus"></span>
-            简途巴士是这样的
-        </div>
-        <div class="item_content">
-            <img class="mb10" src="/images/jzg/jzg_bus0.jpg" alt="巴士图片"/>
-            <img class="mb10" src="/images/jzg/jzg_bus1.jpg" alt="巴士图片"/>
-            <img src="/images/jzg/jzg_bus2.jpg" alt="巴士图片"/>
-        </div>
+<div class="main">
+    <div class="top_banner">
+        <img src="/images/bus_top_banner.png" alt="banner"/>
     </div>
-    <div class="item">
-        <div class="item_title bus">
-            <span class="location"></span>
-            成都巴士上车点
+    <div class="content">
+        <div class="item">
+            <div class="item_title bus">
+                <span class="bus"></span>
+                简途巴士是这样的
+            </div>
+            <div class="item_content">
+                <img class="mb10" src="/images/jzg/jzg_bus0.jpg" alt="巴士图片"/>
+                <img class="mb10" src="/images/jzg/jzg_bus1.jpg" alt="巴士图片"/>
+                <img src="/images/jzg/jzg_bus2.jpg" alt="巴士图片"/>
+            </div>
         </div>
-        <div class="item_content">
-            <p class="desc">一环路百花潭公园西门 ，具体位置点下面：</p>
-            <div id="map" style="width:100%;height:200px"></div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="location"></span>
+                成都巴士上车点
+            </div>
+            <div class="item_content">
+                <p class="desc">一环路百花潭公园西门 ，具体位置点下面：</p>
+                <div id="map" style="width:100%;height:200px"></div>
+            </div>
         </div>
-    </div>
-    <div class="item">
-        <div class="item_title bus">
-            <span class="stop"></span>
-            上车点抵达方式
-        </div>
-        <div class="item_content">
-            <p class="li last">
-                1. 打车：不熟悉路线？打车太难？小简为你准备好了简途市内接驳车，可直接进行微信预定，轻松直达上车点，无忧省心睡好觉哟~
-            </p>
-            <div class="ticket">
-                <div class="left">
-                    <div class="title">成都乘车点接驳服务</div>
-                    <div class="detail">
+        <div class="item">
+            <div class="item_title bus">
+                <span class="stop"></span>
+                上车点抵达方式
+            </div>
+            <div class="item_content">
+                <p class="li last">
+                    1. 打车：不熟悉路线？打车太难？小简为你准备好了简途市内接驳车，可直接进行微信预定，轻松直达上车点，无忧省心睡好觉哟~
+                </p>
+                <div class="ticket">
+                    <div class="left">
+                        <div class="title">成都乘车点接驳服务</div>
+                        <div class="detail">
                         <span class="sc-price">
                             <span class="label">市场价</span>
                             <span>150</span>
                         </span>
-                        <span class="jg-price">
+                            <span class="jg-price">
                             <span class="label">抢购价</span>
                             <span>10</span>
                         </span>
+                        </div>
                     </div>
+                    <a href="http://m.simpletour.com/mobile/gateway/wechat/product/product/detail/187" class="right">立即抢购</a>
                 </div>
-                <a href="http://m.simpletour.com/mobile/gateway/wechat/product/product/detail/187" class="right">立即抢购</a>
+                <p class="li">
+                    当然，成都市内也可以无障碍使用滴滴、uber，如果你能提前跟师傅约好就更棒了。
+                </p>
+                <p class="li last">
+                    2.公交：周围有公交站如下，<br/>
+                    芳邻路西站：126路、127路 <br/>
+                    百花西路公交站：170路 <br/>
+                    望仙场公交站：1024路 <br/>
+                    青羊宫公交站：11路、19路、27路、34路、35路、42路等
+                </p>
             </div>
-            <p class="li">
-                当然，成都市内也可以无障碍使用滴滴、uber，如果你能提前跟师傅约好就更棒了。
-            </p>
-            <p class="li last">
-                2.公交：周围有公交站如下，<br/>
-                芳邻路西站：126路、127路 <br/>
-                百花西路公交站：170路 <br/>
-                望仙场公交站：1024路 <br/>
-                青羊宫公交站：11路、19路、27路、34路、35路、42路等
-            </p>
         </div>
     </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="/images/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a href="/views/guide/cd/home.html">去查看全部成都攻略</a>
+        </footer>
+    </div>
 </div>
-<div class="bottom_banner">
-    <img src="/images/bottom_banner@3x.png" alt="banner"/>
-</div>
-<footer>
-    <a href="/views/guide/cd/home.html">去查看全部成都攻略</a>
-</footer>
 <script type="text/javascript">
     (function (doc, win) {
         var docEl = doc.documentElement,
