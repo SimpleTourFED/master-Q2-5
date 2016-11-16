@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>沿途巴士停靠点</title>
+    <link href="/css/voice.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/voice_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="voice">
+        <!--zan|spot-->
+        <div class="voice_title spot">
+            乐山大佛
+        </div>
+        <div class="voice_desc">
+            <div class="node last">
+                <div class="node_content">
+                    <p>
+                        乐山大佛，又名凌云大佛，位于四川省乐山市南岷江东岸凌云寺侧，濒大渡河、青衣江和岷江三江汇流处。大佛为弥勒佛坐像，通高71米，是中国最大的一尊摩崖石刻造像。
+                    </p>
+                    <p>乐山大佛开凿于唐代开元元年（713年），完成于贞元十九年（803年），历时约九十年。</p>
+                    <p>乐山大佛和凌云山、乌尤山、巨形卧佛等景点组成的乐山大佛景区属于国家5A级旅游景区。</p>
+                    <img src="/images/ls/lsdf1.jpg" alt="">
+                    <p>
+                        乐山大佛头与山齐，足踏大江，双手抚膝，大佛体态匀称，神势肃穆，依山凿成临江危坐。大佛通高71米，头高14.7米，头宽10米，发髻1021个，耳长7米，鼻长5.6米，眉长5.6米，嘴巴和眼长3.3米，颈高3米，肩宽24米，手指长8.3米，从膝盖到脚背28米，脚背宽8.5米，脚面可围坐百人以上。
+                    </p>
+                    <img src="/images/ls/leshandafo.jpg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voice no-pd">
+        <!--zan|spot-->
+        <div class="voice_title spot">
+            东方佛都
+        </div>
+        <div class="voice_desc">
+            <div class="node last">
+                <div class="node_content">
+                    <p>
+                        东方佛都坐落于乐山大佛景区群峰之间，1994年落成开馆，占地面积近四百亩，系仿古石刻佛像主题公园，集宗教艺术、雕刻艺术、园林艺术为一体，是乐山大佛旅游景点佛文化的延伸、是乐山大佛景区的主要组成部分。是国家4A级旅游景区。这里有当今壮界最大、体长170米的巨型卧佛，有我国历代佛像精品，以及东南亚和印度、日本等国家、地区的著名佛像，还有占地800多平方米的佛教艺术精品陈列馆。
+                    </p>
+                    <img src="/images/ls/dongfangfodu.jpg" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+        <a href="#">更多</a>
+    </div>
+</div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/views/guide/ls/home.html">去查看全部乐山攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

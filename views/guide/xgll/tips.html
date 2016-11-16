@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no">
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <link rel="stylesheet" href="/css/tips.scss?__inline" media="screen" title="no_title" charset="utf-8">
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="http://images.simpletour.com/guide/tips_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="tips">
+            <!--tips|travel-->
+            <div class="tips_title">
+                <span class="tip"></span>
+                注意事项
+            </div>
+            <div class="tips_desc">
+                <p>
+                    除5～7月和9～10月外，香格里拉的雨季路况不好，不利于出行，冬季气温太低，如果遇到下雨，那么除了等待就是打道回府。雪后的山路不好走，等着雪化，更是一件需要耐心和时间的事。不要在春节期间贸然前往香格里拉，除了温度低之外，街上人和车都少得可怜，结冰的路面会让司机望而生畏。
+                </p>
+                <div class="attention">
+                    <div class="aTitle">
+                        小简也整理了一下在藏区的一些禁忌，供大家了解：
+                    </div>
+                    <div class="aContent">
+                        <p>藏区禁忌:</p>
+
+                        <p>A&nbsp;&nbsp;藏族人绝对禁吃驴、马肉和狗肉，有些地区也不吃鱼肉；</p>
+
+                        <p>B 不要将塑料制品带入藏区。该地区为了环保，禁用塑料制品。另外塑料袋拴在马鞍上发出的声响，容易使马受惊；</p>
+
+                        <p>C 玛尼堆在藏族心目中是神的路标，上面的玛尼石雕刻着六字真言或佛像，是藏民的圣物。行路遇到寺院、玛尼堆、佛塔等宗教设施，必须从左往右绕行，藏民认为走反了方向会有罪过。不要随意拾取玛尼石，更不可坐在玛尼堆上；</p>
+
+                        <p>D 喝酥油茶时，主人倒茶，客人要待主人双手捧到面前时，才能接过来喝；</p>
+
+                        <p>E 禁忌在别人后背吐唾沫，拍手掌；</p>
+
+                        <p>F&nbsp;&nbsp;行路遇到寺院，玛尼堆，佛塔等宗教设施，必须从左往右绕行；</p>
+
+                        <p>G&nbsp;&nbsp;不得跨越法器，火盆；</p>
+
+                        <p>H&nbsp;&nbsp;经筒，经轮不得逆转；</p>
+
+                        <p class="last">I&nbsp;&nbsp;忌讳别人用手触摸头顶。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tips">
+            <!--tips|travel-->
+            <div class="tips_title">
+                <span class="travel"></span>
+                旅行必备
+            </div>
+            <div class="tips_desc">
+                <p style="margin-bottom:0">
+                    防晒霜、太阳镜<br/>
+                    香格里拉是高原地带，周围环境气候干燥，紫外线辐射强，所以需要购买专门的SPF指数高的高原防晒霜并携带一副太阳镜。<br/>
+                    缓解高原反应的药品<br/>
+                    去高原之前可服用去高原之前可服用一些缓解高原反应的药品，如红景天、高原安、西洋参含片等。<br/>
+                    冲锋衣<br/>
+                    香格里拉气候干燥寒冷6-9月是雨季，带上它可以防风抗寒之余还能防雨。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="http://images.simpletour.com/guide/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a id="jump" href="home.html">去查看全部香格里拉攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

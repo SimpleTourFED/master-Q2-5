@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>小简为你采集吃住娱</title>
+    <link rel="stylesheet" href="/css/collection.scss?__inline" media="screen" title="no_title" charset="utf-8">
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="http://images.simpletour.com/guide/collection_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="collection">
+            <!--catering|hotel|entertainment-->
+            <div class="collection_title catering">
+                美食推荐
+            </div>
+            <div class="collection_desc">
+                <div class="recommend">
+                    <div class="titleLine">
+                        <span class="redline"></span>
+                        <span class="text">推荐</span>
+                        <span class="redline"></span>
+                    </div>
+                    <div class="recommend_content">
+                        <p>
+                            酥油茶：来到藏区一定要品尝正宗的酥油茶。砖茶用水煮好，加入酥油和盐后持续用力搅拌，成为乳浊状的液体之后，是最常见到喝法。也可以将酥油和茶放到一个牛皮袋里，扎紧，用木棒用力敲打——这便是正宗的“打奶茶”。
+                        </p>
+                        <img class="mb10" src="http://images.simpletour.com/guide/xgll/xgll_collection_syc.png" alt=""/>
+                        <p>
+                            牦牛肉：在独克宗古城，可以吃到正宗的藏餐，牦牛肉是必选项。独克宗酥油茶楼的牦牛火锅是一绝，不要错过。另外，在这里还有很多外国人开到西餐店，也用牦牛肉做食材，非常新鲜，推荐独克宗飞虎咖啡，主厨是法国帅哥，牦牛肉汉堡很受欢迎。
+                        </p>
+                        <img src="http://images.simpletour.com/guide/xgll/xgll_collection_mnr.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="http://images.simpletour.com/guide/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a href="home.html">去查看全部香格里拉攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

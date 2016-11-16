@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no">
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <link href="/css/tips.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="/images/tips_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="tips">
+            <!--tips|travel-->
+            <div class="tips_title">
+                <span class="tip"></span>
+                语言
+            </div>
+            <div class="tips_desc">
+                <p>
+                    重庆话是本地常用语，会基本的重庆方言对旅程也有很大帮助，小简这就来教大家几句~
+                </p>
+                <p>
+                    好多钱：多少钱（询问价格）
+                </p>
+                <p>
+                    啷个：怎么（比如啷个走就是怎么走，啷个了就是怎么了）
+                </p>
+                <p>
+                    相因点：便宜点（用于讲价）
+                </p>
+                <p class="last">
+                    霸道：不得了，了不起。（可以用来形容味道很好等）
+                </p>
+            </div>
+        </div>
+        <div class="tips">
+            <!--tips|travel-->
+            <div class="tips_title">
+                <span class="tip"></span>
+                温馨提示
+            </div>
+            <div class="tips_desc">
+                <p>1、天生三桥、龙水峡地缝门票含接驳车（仙女山镇接待中心负一楼坐景区中转车免费前往），仙女山门票、印象武隆门票不含接驳车费用。</p>
+                <p>2、仙女山海拔2033米，气候凉爽，可以带一件薄外套早晚穿。</p>
+                <p>3、仙女山是可以搭帐篷的，山顶地带有高山草甸，非常适合扎帐篷，在这里搭帐篷，晚上要注意保暖（景区有规定的搭帐篷区域，不建议随意乱搭帐篷）。</p>
+                <p class="last"> 4、由于芙蓉洞景区禁止导游进入，所以在景区内无法提供导游服务。</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="/images/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a id="jump" href="/views/guide/wl/home.html">去查看全部武隆攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

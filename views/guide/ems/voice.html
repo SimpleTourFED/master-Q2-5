@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>目的地语音导览</title>
+    <link href="/css/voice.scss?__inline" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="top_banner">
+    <img src="/images/voice_top_banner.png" alt="banner"/>
+</div>
+<div class="content">
+    <div class="voice">
+        <!--zan|spot-->
+        <div class="voice_title spot">
+            都江堰简介：
+        </div>
+        <div class="voice_desc">
+            <div class="node last">
+                <div class="node_content">
+                    <p>
+                        峨眉山（Mount Emei）位于中国四川省乐山市峨眉山市境内，是中国“四大佛教名山”之一，地势陡峭，风景秀丽，素有“峨眉天下秀”之称，山上的万佛顶最高，海拔3099米，高出峨眉平原2700多米。《峨眉郡志》云：“云鬘凝翠，鬒黛遥妆，真如螓首蛾眉，细而长，美而艳也，故名峨眉山。”[1-2]
+                    </p>
+                    <p>峨眉山处于多种自然要素的交汇地区，区系成分复杂，生物种类丰富，特有物种繁多，保存有完整的亚热带植被体系，有植物3200多种，约占中国植物物种总数的1/10。峨眉山还是多种稀有动物的栖居地，动物种类达2300多种。山路沿途有较多猴群，常结队向游人讨食，为该山一大特色。</p>
+                    <img src="/images/jzg_voice_001.png" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="voice no-pd">
+        <!--zan|spot-->
+        <div class="voice_title zan">
+            都江堰必游景点
+        </div>
+        <div class="voice_desc">
+            <div class="node">
+                <div class="node_title">
+                    金顶金佛
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：金顶是峨眉山的象征，金佛是峨眉山的标志。金顶是峨眉山景点和寺庙的汇集，48米高的四面十方普贤金像矗立在金顶。
+                    </p>
+                    <img src="/images/jzg_voice_001.png" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node">
+                <div class="node_title">
+                    万佛顶
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：万佛顶是中国四大佛教名山中海拔最高的风景名胜区及自然生态保护区，也是中国海拔最高的世界自然和文化遗产地。从金顶向西横行，是千佛顶。
+                    </p>
+                    <img src="/images/jzg_voice_001.png" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+            <div class="node last">
+                <div class="node_title">
+                    洗象池
+                </div>
+                <div class="node_content">
+                    <p>
+                        简介：洗象池是峨眉山八大寺庙之一，位于峨眉山海拔2070米的钻天坡上，由仙峰寺上行25华里，明时仅为一亭，称“初喜亭”，后改建为庵，名初喜庵。
+                    </p>
+                    <img src="/images/jzg_voice_001.png" alt="">
+                    <a href="#">播放音频文件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more">
+        <a href="#">更多</a>
+    </div>
+</div>
+</div>
+<div class="bottom_banner">
+    <img src="/images/bottom_banner@3x.png" alt="banner"/>
+</div>
+<footer>
+    <a href="/views/guide/ems/home.html">去查看全部峨眉山攻略</a>
+</footer>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>巴士上车点</title>
+    <link rel="stylesheet" href="/css/bus.scss?__inline" media="screen" title="no_title" charset="utf-8">
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="http://images.simpletour.com/guide/bus_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="item">
+            <div class="item_title bus">
+                <span class="bus"></span>
+                简途巴士是这样的
+            </div>
+            <div class="item_content">
+                <img src="http://images.simpletour.com/guide/xgll/xgll_bus0.png" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="location"></span>
+                巴士上车点
+            </div>
+            <div class="item_content">
+                <p class="desc" style="line-height:1rem">丽江大研古城北门玉缘桥停车场，距大水车180米。</p>
+                <div id="map" style="width:100%;height:200px;margin-bottom:10px"></div>
+                <img src="http://images.simpletour.com/guide/xgll/xgll_bus1.png" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="stop"></span>
+                上车点抵达方式
+            </div>
+            <div class="item_content">
+                <p class="li last mb10">
+                    出发当天抵达上车点
+                </p>
+                <p class="li last mb10">
+                    1、丽江客运中心－大研古城
+                    从客运中心搭乘11路车到古城口站，票价1元，车程8分钟。
+                    2、丽江火车站－大研古城
+                    搭乘4路火车站专线，票价1元，车程20分钟。
+                </p>
+                <p class="li last">
+                    发车班次：
+                    云巴士丽江到香格里拉，每天有两班车，分别在08:00、13:00发车。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="http://images.simpletour.com/guide/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a href="home.html">去查看全部香格里拉攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    var position = function (id, detail) {
+        var service = new qq.maps.Geocoder(), map, marker;
+        service.setComplete(function (data) {
+            var center = new qq.maps.LatLng(data.detail.location.lat, data.detail.location.lng);
+            map = new qq.maps.Map(document.getElementById(id), {
+                center: center,
+                zoom: 15
+            })
+            marker = new qq.maps.Marker({
+                position: center,
+                map: map
+            })
+        })
+        service.setError(function (data) {
+            console.error(data + ',error');
+        })
+        service.getLocation(detail);
+    }
+
+    position('map', '云南省丽江大研古城北门玉缘桥停车场');
+</script>
+</body>
+</html>
