@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>旅行小贴士</title>
+    <style type="text/css">*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(255,255,255,0);font-family:Helvetica,sans-serif;-webkit-touch-callout:none;box-sizing:border-box;outline:0}a:active,a:hover,a:link,a:visited{text-decoration:none;outline:0}img{width:100%;height:100%;border:0;vertical-align:top;font-size:.75rem;color:#535353}html,body{width:100%;height:100%;font-size:20px!important;background:#fff}html{font-size:20px}.top_banner{width:13rem;height:3.45rem;margin:.75rem auto;position:absolute;left:0;right:0;top:0}.top_banner img{width:100%;height:100%}.bottom{position:absolute;left:0;right:0;bottom:0}.bottom_banner{width:13.65rem;height:1.65rem;margin:0 auto}footer{padding:.65rem 0 1.5rem}footer a{display:block;width:14.4rem;height:2.2rem;line-height:2.2rem;color:#fff;font-size:.7rem;margin:0 auto;text-align:center;background-color:#DC253B;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px}footer a:before{content:'';display:inline-block;width:1rem;height:1.1rem;margin:.55rem .75rem;background:url(../images/guide.png) no-repeat center;background-size:cover;vertical-align:top}.main{width:100%;min-height:100%;padding:4.95rem 0 6rem;position:relative}.content{padding:.25rem .8rem 0}.content .pt10{padding-top:.5rem}.content .pb10{padding-bottom:.5rem}.content .pt15{padding-top:.75rem}.content .pb15{padding-bottom:.75rem}.content .tips{padding-bottom:1.5rem}.content .tips .tips_title{color:#535353;font-size:.75rem;padding-bottom:.5rem;line-height:1rem}.content .tips .tips_title span{display:inline-block;width:1rem;height:1rem;vertical-align:top}.content .tips .tips_title .tip{background:url(../images/tips_icon.png) no-repeat center;background-size:cover}.content .tips .tips_title .travel{background:url(../images/travel_icon.png) no-repeat center;background-size:cover}.content .tips .tips_desc p{font-size:.65rem;color:#737373;line-height:1rem;margin-bottom:.75rem}.content .tips .tips_desc p.last{margin-bottom:0}.content .tips .tips_desc .attention .aTitle{font-size:.75rem;color:#DC253B;line-height:1rem;margin-bottom:.75rem}</style>
+<script src="http://activity.simpletour.com/js/youmeng.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="top_banner">
+        <img src="../images/tips_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="tips">
+            <!--tips|travel-->
+    <div class="tips_title">
+        <span class="tip"></span>
+        注意事项
+    </div>
+            <div class="tips_desc">
+                <p>
+                    由于乐山大佛是直接与外部环境接触，因此损害受外部因素很大，游客应该注意自己的行为举止，不吐痰，不扔垃圾。
+                </p>
+            </div>
+        </div>
+        <div class="tips">
+            <!--tips|travel-->
+                <div class="tips_title">
+                <span class="travel"></span>
+                  旅行必备
+                </div>
+            <div class="tips_desc">
+                <p>1、如果可能的话在进景区之前，多买一些水，景区内部的水可能会比较贵。</p>
+
+                <p class="last">2、夏季景区较热，应注意防晒，防暑等。</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom_banner">
+            <img src="../images/bottom_banner@3x.png" alt="banner"/>
+        </div>
+        <footer>
+            <a href="http://activity.simpletour.com/guide/ls/home.html">去查看全部乐山攻略</a>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    // 针对uc横竖屏rem html没有重绘的问题
+                    var style;
+                    if (style = document.getElementById("forhtml")) {
+                        style.parentNode.removeChild(style);
+                    }
+                    style = document.createElement("style");
+                    style.id = "forhtml";
+                    document.head.appendChild(style);
+                    style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                    //
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

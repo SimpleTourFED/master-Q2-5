@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="wap-font-scale" content="no"/>
+    <meta name="format-detection" content="telephone=no;email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>巴士上车点</title>
+    <style type="text/css">*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(255,255,255,0);font-family:Helvetica,sans-serif;-webkit-touch-callout:none;box-sizing:border-box;outline:0;word-wrap:break-word}a:active,a:hover,a:link,a:visited{text-decoration:none;outline:0}img{width:100%;height:100%;border:0;vertical-align:top;font-size:.75rem;color:#535353}html,body{width:100%;height:100%;font-size:20px;background:#fff}html{font-size:20px}.top_banner{width:13rem;height:3.45rem;margin:.75rem auto}.top_banner img{width:100%;height:100%}.content{padding:.25rem .8rem 0}.content .mb10{margin-bottom:.5rem}.content .ticket{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-ms-box-orient:horizontal;-moz-box-orient:horizontal;-webkit-flex-flow:row nowrap;-ms-flex-flow:row nowrap;-moz-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;margin-top:.75rem;margin-bottom:.75rem;height:2.85rem;background-color:#FFD2CB}.content .ticket .left{-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding:.45rem .5rem .45rem .7rem}.content .ticket .left .title{color:#C5061D;font-size:.75rem;padding-bottom:.4rem;word-break:keep-all;max-width:10.3rem;height:1.25rem;line-height:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.content .ticket .left .detail{height:.7rem;line-height:.7rem}.content .ticket .left .detail span{color:#CB1A2E;font-size:.6rem;height:.6rem;line-height:.6rem;vertical-align:middle;margin-right:.5rem}.content .ticket .right{display:inline-block;width:2.5rem;min-height:2.85rem;text-align:center;color:#fff;padding:.45rem;font-size:.75rem;line-height:1rem;background-color:#DC253B;word-break:break-all;-webkit-border-radius:0 4px 4px 0;-moz-border-radius:0 4px 4px 0;-ms-border-radius:0 4px 4px 0;-o-border-radius:0 4px 4px 0;border-radius:0 4px 4px 0}.content .ticket.no-mb{margin-bottom:0}.content .ticket.no-mt{margin-top:0}.content .item{padding-bottom:1.5rem}.content .item .item_title{color:#535353;font-size:.75rem;padding-bottom:.5rem;line-height:1rem}.content .item .item_title span{display:inline-block;vertical-align:top;width:1rem;height:1rem}.content .item .item_title .bus{background:url(../images/bus_icon.png) no-repeat center;background-size:cover}.content .item .item_title .stop{background:url(../images/stop_icon.png) no-repeat center;background-size:cover}.content .item .item_title .location{background:url(../images/location_icon.png) no-repeat center;background-size:cover}.content .item .item_content .bb_bus,.content .item .item_content .ml_bus{width:100%;height:7.2rem;min-height:7.2rem}.content .item .item_content .bb_bus{padding-bottom:.5rem}.content .item .item_content p{font-size:.65rem;color:#737373}.content .item .item_content p.desc{padding-bottom:.5rem}.content .item .item_content .map{height:7.2rem;min-height:7.2rem}.content .item .item_content .li{padding-bottom:.75rem;line-height:1rem}.content .item .item_content .li.last{padding-bottom:0}.bottom_banner{width:13.65rem;height:1.65rem;margin:0 auto}footer{padding:.65rem 0 1.5rem}footer a{display:block;width:14.4rem;height:2.2rem;line-height:2.2rem;color:#fff;font-size:.7rem;margin:0 auto;text-align:center;background-color:#DC253B;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px}footer a:before{content:'';display:inline-block;width:1rem;height:1.1rem;margin:.55rem .75rem;background:url(../images/guide.png) no-repeat center;background-size:cover;vertical-align:top}</style>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=3U5BZ-XRWWQ-LJJ5C-GHCQG-G5OIZ-EIFPD"></script>
+    <script src="http://activity.simpletour.com/js/youmeng.js"></script>
+</head>
+<body>
+    <div class="top_banner">
+        <img src="../images/bus_top_banner.png" alt="banner"/>
+    </div>
+    <div class="content">
+        <div class="item">
+            <div class="item_title bus">
+                <span class="bus"></span>
+                简途巴士是这样的
+            </div>
+            <div class="item_content">
+                <img class="mb10" src="../images/jzg/jzg_bus0.jpg" alt="巴士图片"/>
+                <img class="mb10" src="../images/jzg/jzg_bus1.jpg" alt="巴士图片"/>
+                <img src="../images/jzg/jzg_bus2.jpg" alt="巴士图片"/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="location"></span>
+                成都巴士上车点
+            </div>
+            <div class="item_content">
+                <p class="desc">宽窄巷子蜀风园酒店门口，具体位置点下面：</p>
+                <div id="map" style="width:100%;height:200px"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item_title bus">
+                <span class="stop"></span>
+                上车点抵达方式
+            </div>
+            <div class="item_content">
+                <p class="li last">
+                    1. 打车：不熟悉路线？打车太难？小简为你准备好了简途市内接驳车，可直接进行微信预定，轻松直达上车点，无忧省心睡好觉哟~
+                </p>
+                <div class="ticket">
+                    <div class="left">
+                        <div class="title">成都乘车点接驳服务（酒店-简途上车点）</div>
+                        <div class="detail">
+                            <span class="label">抢购价</span>
+                            <span>10元</span>
+                        </div>
+                    </div>
+                    <a href="http://m.simpletour.com/mobile/gateway/wechat/product/scenic/detail/261"
+                    class="right">立即抢购</a>
+                </div>
+                <p class="li">
+                    当然，成都市内也可以无障碍使用滴滴、uber，如果你能提前跟师傅约好就更棒了。
+                </p>
+                <p class="li last">
+                    2.公交：周围有公交站如下，<br/>
+                    金河路公交站：5路、4路、13路、47路、58路<br/>
+                    宽窄巷子公交站：62路，70路、93路、126路、127路<br/>
+                    小南街北公交站：53路、70路、93路、126路、127路<br/>
+                    长顺中街公交站：62路、70路、93路
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_banner">
+        <img src="../images/bottom_banner@3x.png" alt="banner"/>
+    </div>
+    <footer>
+        <a href="http://activity.simpletour.com/guide/jzg/home.html">去查看全部九寨沟攻略</a>
+    </footer>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                var style;
+                if (style = document.getElementById("forhtml")) {
+                    style.parentNode.removeChild(style);
+                }
+                style = document.createElement("style");
+                style.id = "forhtml";
+                document.head.appendChild(style);
+                style.appendChild(document.createTextNode("html{font-size:" + 20 * (clientWidth / 320) + "px !important;}"));
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        var position = function (id, detail) {
+            var service = new qq.maps.Geocoder(), map, marker;
+            service.setComplete(function (data) {
+                var center = new qq.maps.LatLng(data.detail.location.lat, data.detail.location.lng);
+                map = new qq.maps.Map(document.getElementById(id), {
+                    center: center,
+                    zoom: 15
+                })
+                marker = new qq.maps.Marker({
+                    position: center,
+                    map: map
+                })
+            })
+            service.setError(function (data) {
+                console.error(data + ',error');
+            })
+            service.getLocation(detail);
+        }
+
+        position('map', '四川省成都市宽窄巷子蜀风园酒店门口')
+    </script>
+</body>
+</html>
